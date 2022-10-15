@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_13_231405) do
+ActiveRecord::Schema.define(version: 2022_10_15_182245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,40 +18,19 @@ ActiveRecord::Schema.define(version: 2022_10_13_231405) do
   create_table "dishes", force: :cascade do |t|
     t.string "name"
     t.string "cuisine_type"
-    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_dishes_on_restaurant_id"
-  end
-
-  create_table "ratings", force: :cascade do |t|
-    t.integer "grade"
-    t.bigint "user_id"
-    t.bigint "restaurant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_ratings_on_restaurant_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
-  end
-
-  create_table "restaurants", force: :cascade do |t|
-    t.string "name"
-    t.string "image_url"
-    t.string "address"
-    t.string "phone"
-    t.float "rating"
-    t.string "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "yelp_id"
+    t.integer "spice_rating"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.text "description"
-    t.integer "grade"
     t.bigint "user_id"
     t.bigint "dish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "overall_rating"
     t.index ["dish_id"], name: "index_reviews_on_dish_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -63,9 +42,6 @@ ActiveRecord::Schema.define(version: 2022_10_13_231405) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "dishes", "restaurants"
-  add_foreign_key "ratings", "restaurants"
-  add_foreign_key "ratings", "users"
   add_foreign_key "reviews", "dishes"
   add_foreign_key "reviews", "users"
 end
