@@ -9,10 +9,10 @@ module Types
 
     # TODO: remove me
     field :users, 
-      [Type::UserType], 
+      [Types::UserType], 
       null: false,
       description: "An example field added by the generator"
-      
+
     def users
       User.all
     end

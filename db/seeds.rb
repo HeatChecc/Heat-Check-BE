@@ -10,3 +10,21 @@ user_2 = User.create!(username: "phil", email: "phil@phil.com")
 user_3 = User.create!(username: "ethan", email: "ethan@ethan.com")
 user_4 = User.create!(username: "gauri", email: "gauri@gauri.com")
 
+# data = {
+#   "user_1": {
+#     "username": "eli",
+#     "email": "eli@eli.com"
+#   },
+#   "user_2": {
+#     "username": "phil",
+#     "email": "phil@phil.com"
+#   },
+#   "user_3": {
+#     "username": "ethan",
+#     "email": "ethan@ethan.com"
+#   },
+#   "user_4": {
+#     "username": "gauri",
+#     "email": "gauri@gauri.com"
+#   }
+# }
