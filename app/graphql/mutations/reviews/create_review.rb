@@ -6,9 +6,8 @@ module Mutations
       argument :user_id, ID, required: true
       argument :dish_id, ID, required: true
       type Types::ReviewType
-
+      
       def resolve(attributes)
-        binding.pry
         Review.create!(attributes)
       end
     end
