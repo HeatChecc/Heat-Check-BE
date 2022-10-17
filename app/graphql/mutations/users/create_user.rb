@@ -8,7 +8,7 @@ module Mutations
       type Types::UserType
 
       def resolve(attributes)
-        User.create!(attributes)
+        User.create(attributes)
       end
     end
   end
