@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Dish < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates_presence_of :cuisine_type
