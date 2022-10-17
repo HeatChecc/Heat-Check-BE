@@ -33,7 +33,7 @@ module Mutations
           post '/graphql', params: {query: @query}
           expect(Review.count).to eq(1)
           # require 'pry'; binding.pry 
-       end
+        end
 
         it 'returns a review' do
           post '/graphql', params: {query: @query}
@@ -44,26 +44,6 @@ module Mutations
           expect(data['review']['overallRating']).to eq(4)
         end
       end
-
-      # def query
-      #   <<~GQL
-      #   mutation {
-      #     review: createReview(
-      #     input: {
-      #       description: "yummers"
-      #       overall_rating: "4"
-      #       user_id: "#{@user_1.id}"
-      #       dish_id: "#{@dish_1.id}"
-      #     }
-      #   ) { 
-      #     description
-      #     overall_rating
-      #     user_id
-      #     dish_id
-      #     } 
-      #   }
-      #   GQL
-      # end
     end
   end
 end
