@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class QueryType < Types::BaseObject
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
@@ -8,10 +10,10 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :users, 
-      [Types::UserType], 
-      null: false,
-      description: "An example field added by the generator"
+    field :users,
+          [Types::UserType],
+          null: false,
+          description: 'An example field added by the generator'
 
     def users
       User.all
