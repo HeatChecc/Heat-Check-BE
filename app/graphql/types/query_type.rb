@@ -23,18 +23,22 @@ module Types
       Dish.find(id)
     end
     
-    # def reviews(id:)
-    #   dish = Dish.find(id)
-    #   dish.reviews
-    # end
 
-      field :review, Types::ReviewType, null: false do
-        argument :id, ID, required: true
-      end
+    field :review, Types::ReviewType, null: false do
+      argument :id, ID, required: true
+    end
 
 
     def review(id:)
       Review.find(id)
+    end
+
+    field :restaurants, [Types::RestaurantType], null: false do
+      argument :location, String, required: true
+    end
+
+    def restaurants(location:)
+      RestaurantsFacade.restaurants_near(location)
     end
   end
 end
