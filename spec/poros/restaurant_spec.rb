@@ -88,4 +88,5 @@ RSpec.describe Restaurant do
     expect(bad_restaurant.lon).to eq('Not found')
     expect(bad_restaurant.id).to be_nil
   end
+  
 end
