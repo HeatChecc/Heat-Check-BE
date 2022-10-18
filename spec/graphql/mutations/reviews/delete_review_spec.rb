@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations
   module Reviews
     RSpec.describe DeleteReview, type: :request do
@@ -6,7 +8,7 @@ module Mutations
           @user_1 = User.create!(username: 'phil', email: 'phil@phil.com')
           @dish_1 = Dish.create!(name: 'Pad Thai', cuisine_type: 'Thai', yelp_id: '1', spice_rating: 3)
           @review_1 = Review.create!(description: 'yummers', overall_rating: 4, user_id: @user_1.id,
-                                      dish_id: @dish_1.id)
+                                     dish_id: @dish_1.id)
           @query = <<~GQL
             mutation {
               review: deleteReview(
