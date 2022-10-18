@@ -11,6 +11,7 @@ class Restaurant
               :phone,
               :lat,
               :lon,
+              :city,
               :id
 
   def initialize(data = {})
@@ -24,6 +25,7 @@ class Restaurant
     @phone = nil_check(data[:display_phone])
     @lat = data[:coordinates] ? data[:coordinates][:latitude] : 'Not found'
     @lon = data[:coordinates] ? data[:coordinates][:longitude] : 'Not found'
+    @city = data[:location][:city] + ", " + data[:location][:state]
     @id = data[:id]
   end
 
