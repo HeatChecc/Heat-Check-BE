@@ -11,6 +11,8 @@ RSpec.describe Types::QueryType, type: :request do
       post '/graphql', params: { query: query }
       json = JSON.parse(response.body)
       data = json['data']['user']
+      expect(data['username']).to eq('wub')
+      expect(data['email']).to eq('wub@dub.com')
     end
   end
 
