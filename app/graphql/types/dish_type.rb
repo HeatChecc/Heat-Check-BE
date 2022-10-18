@@ -5,6 +5,7 @@ module Types
     field :id, ID, null: false
     field :name, String
     field :cuisine_type, String
+    field :reviews, [Types::ReviewType], null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :yelp_id, String
