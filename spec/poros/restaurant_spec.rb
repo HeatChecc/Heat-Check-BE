@@ -71,6 +71,7 @@ RSpec.describe Restaurant do
     expect(@restaurant.phone).to eq('(303) 329-8143')
     expect(@restaurant.lat).to eq(39.751168)
     expect(@restaurant.lon).to eq(-104.933227)
+    expect(@restaurant.id).to eq('eCkWoMKHh5PoNqYvdyviRA')
   end
 
   it 'errors gracefully' do
@@ -85,5 +86,7 @@ RSpec.describe Restaurant do
     expect(bad_restaurant.phone).to eq('Not found')
     expect(bad_restaurant.lat).to eq('Not found')
     expect(bad_restaurant.lon).to eq('Not found')
+    expect(bad_restaurant.id).to be_nil
   end
+  
 end
