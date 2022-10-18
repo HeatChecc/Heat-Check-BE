@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Types::QueryType, type: :request do
@@ -23,23 +25,23 @@ RSpec.describe Types::QueryType, type: :request do
 
   def query
     <<~GQL
-      {
-    dish(id: "#{@pad_thai.id}") {
-        id
-        name
-        cuisineType
-        yelpId
-        spiceRating
-        reviews {
-            id
-            description
-            overallRating
-            dishId
-            userId
+        {
+      dish(id: "#{@pad_thai.id}") {
+          id
+          name
+          cuisineType
+          yelpId
+          spiceRating
+          reviews {
+              id
+              description
+              overallRating
+              dishId
+              userId
+          }
+         }
         }
-       }
-      }
-    
+
     GQL
   end
 end

@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Types::QueryType, type: :request do
   before do
     @eli = User.create!(username: 'eli', email: 'eli@eli.com')
-    @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
+    @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                            spice_rating: 4)
     @review = Review.create!(description: 'yummers', overall_rating: 3, user_id: @eli.id, dish_id: @burrito.id)
   end
   describe '.review(id:)' do
