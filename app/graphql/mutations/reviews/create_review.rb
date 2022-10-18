@@ -10,7 +10,7 @@ module Mutations
       type Types::ReviewType
 
       def resolve(attributes)
-        Review.create!(attributes)
+        Review.create(attributes)
       end
     end
   end

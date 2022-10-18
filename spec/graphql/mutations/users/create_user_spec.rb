@@ -30,10 +30,10 @@ module Mutations
               email: "hello@wassup.com"
               username: "hello"
             }
-          ) {#{' '}
+          ) {
             email
             username
-            }#{' '}
+            }
           }
         GQL
       end
