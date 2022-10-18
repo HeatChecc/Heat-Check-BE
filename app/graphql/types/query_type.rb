@@ -14,5 +14,27 @@ module Types
     def user(id:)
       User.find(id)
     end
+
+     field :dish, Types::DishType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def dish(id:)
+      Dish.find(id)
+    end
+    
+    # def reviews(id:)
+    #   dish = Dish.find(id)
+    #   dish.reviews
+    # end
+
+      field :review, Types::ReviewType, null: false do
+        argument :id, ID, required: true
+      end
+
+
+    def review(id:)
+      Review.find(id)
+    end
   end
 end
