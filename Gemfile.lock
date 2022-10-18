@@ -110,23 +110,12 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.6.0)
     msgpack (1.6.0-java)
     nio4r (2.5.8)
-    nio4r (2.5.8-java)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
-    nokogiri (1.13.8-java)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x64-mingw32)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86-mingw32)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
+    nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
@@ -284,13 +273,7 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
-  java
-  ruby
-  x64-mingw32
-  x86-mingw32
-  x86-mswin32
-  x86_64-darwin-21
-  x86_64-linux
+  arm64-darwin-21
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
