@@ -25,8 +25,8 @@ class Restaurant
     @phone = nil_check(data[:display_phone])
     @lat = data[:coordinates] ? data[:coordinates][:latitude] : 'Not found'
     @lon = data[:coordinates] ? data[:coordinates][:longitude] : 'Not found'
-    @city = data[:location][:city] + ", " + data[:location][:state]
-    @id = data[:id]
+    @city = data[:location] ? "#{data[:location][:city]}, #{data[:location][:state]}" : 'Not found'
+    @id = nil_check(data[:id])
   end
 
   def nil_check(attribute)
