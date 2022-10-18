@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Mutations
   module Dishes
-    RSpec.describe UpdateDish, type: :request do  
+    RSpec.describe UpdateDish, type: :request do
       before do
         @dish_1 = Dish.create(name: 'Pad Thai Hot', cuisine_type: 'Thai', yelp_id: '1', spice_rating: 3)
       end
@@ -13,15 +15,15 @@ module Mutations
           json = JSON.parse(response.body)
           data = json['data']['dish']
           expect(data).to include(
-            "name"=> "Super Spicy Pad Thai",
-            "cuisineType"=> "Thai",
-            "yelpId"=> "1",
-            "spiceRating"=> 9
+            'name' => 'Super Spicy Pad Thai',
+            'cuisineType' => 'Thai',
+            'yelpId' => '1',
+            'spiceRating' => 9
           )
         end
 
         def query
-            <<~GQL
+          <<~GQL
             mutation {
               dish: updateDish(
                 input: {
