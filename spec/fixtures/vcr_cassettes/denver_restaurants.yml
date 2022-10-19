@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2022-10-19T00:00:00+00:00'
-      X-B3-Sampled:
-      - '0'
-      Server:
-      - envoy
-      X-Zipkin-Id:
-      - 934b852ae6c572f2
-      X-Routing-Service:
-      - routing-main--uswest2-6597555464-k7b8m; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4998'
+      - '4992'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2022-10-19T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-6597555464-x24fw; site=public_api_v3
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 5661a3f8673e035a
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 18 Oct 2022 03:39:11 GMT
+      - Tue, 18 Oct 2022 23:51:54 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8271-DEN
+      - cache-den8281-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -68,7 +68,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
         "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3gRykLgv5-_vxngoRlAFrQ",
+        "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 107, "categories": [{"alias": "noodles", "title": "Noodles"},
         {"alias": "szechuan", "title": "Szechuan"}], "rating": 4.5, "coordinates":
         {"latitude": 39.70269, "longitude": -104.94143}, "transactions": ["pickup",
@@ -78,7 +78,7 @@ http_interactions:
         80246"]}, "phone": "+13037368818", "display_phone": "(303) 736-8818", "distance":
         4314.359896295189}, {"id": "BqqesHM5ZounBdqLXpIruQ", "alias": "hey-bangkok-denver",
         "name": "Hey Bangkok!", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/-aIpbhWh5s1qYiN18tueFA/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/hey-bangkok-denver?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3gRykLgv5-_vxngoRlAFrQ",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hey-bangkok-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 130, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "noodles", "title": "Noodles"}], "rating": 4.5, "coordinates": {"latitude":
         39.7109567, "longitude": -104.981987}, "transactions": ["pickup", "delivery"],
@@ -88,7 +88,7 @@ http_interactions:
         "phone": "+13037770559", "display_phone": "(303) 777-0559", "distance": 2910.503629157787},
         {"id": "RTvR4W7K-59xFFZAUTMTbQ", "alias": "lucky-noodles-denver", "name":
         "Lucky Noodles", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/sI1LfYfMkL0k-6f6U702VQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3gRykLgv5-_vxngoRlAFrQ",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 176, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "noodles", "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}],
         "rating": 4.5, "coordinates": {"latitude": 39.7402, "longitude": -104.97194},
@@ -96,10 +96,20 @@ http_interactions:
         "1201 E Colfax Ave", "address2": "Ste 102", "address3": "", "city": "Denver",
         "zip_code": "80218", "country": "US", "state": "CO", "display_address": ["1201
         E Colfax Ave", "Ste 102", "Denver, CO 80218"]}, "phone": "+17209171000", "display_phone":
-        "(720) 917-1000", "distance": 541.9058239564879}, {"id": "6kRbrLNIZKZ1fcjgsTFobg",
+        "(720) 917-1000", "distance": 541.9058239564879}, {"id": "Taw_YBKFGjfLEbeUejaXWg",
+        "alias": "clawful-denver", "name": "Clawful", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/weDMpQLRtwWkPsQ2kd3g5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/clawful-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 110, "categories": [{"alias": "cajun", "title": "Cajun/Creole"},
+        {"alias": "seafood", "title": "Seafood"}, {"alias": "vietnamese", "title":
+        "Vietnamese"}], "rating": 4.5, "coordinates": {"latitude": 39.683612, "longitude":
+        -105.079427}, "transactions": ["pickup", "delivery"], "location": {"address1":
+        "1862 S Wadsworth Blvd", "address2": null, "address3": "", "city": "Denver",
+        "zip_code": "80232", "country": "US", "state": "CO", "display_address": ["1862
+        S Wadsworth Blvd", "Denver, CO 80232"]}, "phone": "+13036328079", "display_phone":
+        "(303) 632-8079", "distance": 10979.411234846959}, {"id": "6kRbrLNIZKZ1fcjgsTFobg",
         "alias": "fortune-wok-to-table-denver", "name": "Fortune Wok to Table", "image_url":
         "https://s3-media1.fl.yelpcdn.com/bphoto/aVmP8cWwrCsLWWjwx8wvjg/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/fortune-wok-to-table-denver?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3gRykLgv5-_vxngoRlAFrQ",
+        false, "url": "https://www.yelp.com/biz/fortune-wok-to-table-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 389, "categories": [{"alias": "noodles", "title": "Noodles"},
         {"alias": "dimsum", "title": "Dim Sum"}, {"alias": "shanghainese", "title":
         "Shanghainese"}], "rating": 4.5, "coordinates": {"latitude": 39.72124, "longitude":
@@ -107,18 +117,127 @@ http_interactions:
         "2817 E 3rd Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
         "80206", "country": "US", "state": "CO", "display_address": ["2817 E 3rd Ave",
         "Denver, CO 80206"]}, "phone": "+13033217788", "display_phone": "(303) 321-7788",
-        "distance": 2093.330545587293}, {"id": "ST8MWTSCNOutSIQLkrNrhg", "alias":
-        "spice-room-neighborhood-indian-bistro-denver-2", "name": "SPICE ROOM | Neighborhood
-        Indian Bistro", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/JwzHVvBv3g9816rnrYZEww/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/spice-room-neighborhood-indian-bistro-denver-2?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3gRykLgv5-_vxngoRlAFrQ",
-        "review_count": 489, "categories": [{"alias": "indpak", "title": "Indian"},
-        {"alias": "vegan", "title": "Vegan"}, {"alias": "gluten_free", "title": "Gluten-Free"}],
-        "rating": 4.5, "coordinates": {"latitude": 39.769626, "longitude": -105.028993785381},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
-        "3157 W 38th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
-        "80211", "country": "US", "state": "CO", "display_address": ["3157 W 38th
-        Ave", "Denver, CO 80211"]}, "phone": "+13034553127", "display_phone": "(303)
-        455-3127", "distance": 6293.026246672196}], "total": 1200, "region": {"center":
-        {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Tue, 18 Oct 2022 03:39:11 GMT
+        "distance": 2093.330545587293}], "total": 1200, "region": {"center": {"longitude":
+        -104.97024536132812, "latitude": 39.73552421220229}}}'
+  recorded_at: Tue, 18 Oct 2022 23:51:54 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?limit=5&location=Denver,%20CO&sort_by=rating&term=spicy%20food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <yelp_token>
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4991'
+      X-Zipkin-Id:
+      - 69f8ed0f18bffce9
+      Ratelimit-Resettime:
+      - '2022-10-19T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-6597555464-scb9g; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_uswest2
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-69-73-uswest2aprod
+      X-Extlb:
+      - 10-69-69-73-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 18 Oct 2022 23:51:54 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8228-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
+        "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 107, "categories": [{"alias": "noodles", "title": "Noodles"},
+        {"alias": "szechuan", "title": "Szechuan"}], "rating": 4.5, "coordinates":
+        {"latitude": 39.70269, "longitude": -104.94143}, "transactions": ["delivery",
+        "pickup"], "price": "$$", "location": {"address1": "703 S Colorado Blvd",
+        "address2": "", "address3": null, "city": "Denver", "zip_code": "80246", "country":
+        "US", "state": "CO", "display_address": ["703 S Colorado Blvd", "Denver, CO
+        80246"]}, "phone": "+13037368818", "display_phone": "(303) 736-8818", "distance":
+        4314.359896295189}, {"id": "BqqesHM5ZounBdqLXpIruQ", "alias": "hey-bangkok-denver",
+        "name": "Hey Bangkok!", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/-aIpbhWh5s1qYiN18tueFA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hey-bangkok-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 130, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
+        "noodles", "title": "Noodles"}], "rating": 4.5, "coordinates": {"latitude":
+        39.7109567, "longitude": -104.981987}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "301 S Pennsylvania St", "address2":
+        "", "address3": null, "city": "Denver", "zip_code": "80209", "country": "US",
+        "state": "CO", "display_address": ["301 S Pennsylvania St", "Denver, CO 80209"]},
+        "phone": "+13037770559", "display_phone": "(303) 777-0559", "distance": 2910.503629157787},
+        {"id": "RTvR4W7K-59xFFZAUTMTbQ", "alias": "lucky-noodles-denver", "name":
+        "Lucky Noodles", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/sI1LfYfMkL0k-6f6U702VQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lucky-noodles-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 176, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
+        "noodles", "title": "Noodles"}, {"alias": "coffee", "title": "Coffee & Tea"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7402, "longitude": -104.97194},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "1201 E Colfax Ave", "address2": "Ste 102", "address3": "", "city": "Denver",
+        "zip_code": "80218", "country": "US", "state": "CO", "display_address": ["1201
+        E Colfax Ave", "Ste 102", "Denver, CO 80218"]}, "phone": "+17209171000", "display_phone":
+        "(720) 917-1000", "distance": 541.9058239564879}, {"id": "Taw_YBKFGjfLEbeUejaXWg",
+        "alias": "clawful-denver", "name": "Clawful", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/weDMpQLRtwWkPsQ2kd3g5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/clawful-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 110, "categories": [{"alias": "cajun", "title": "Cajun/Creole"},
+        {"alias": "seafood", "title": "Seafood"}, {"alias": "vietnamese", "title":
+        "Vietnamese"}], "rating": 4.5, "coordinates": {"latitude": 39.683612, "longitude":
+        -105.079427}, "transactions": ["delivery", "pickup"], "location": {"address1":
+        "1862 S Wadsworth Blvd", "address2": null, "address3": "", "city": "Denver",
+        "zip_code": "80232", "country": "US", "state": "CO", "display_address": ["1862
+        S Wadsworth Blvd", "Denver, CO 80232"]}, "phone": "+13036328079", "display_phone":
+        "(303) 632-8079", "distance": 10979.411234846959}, {"id": "6kRbrLNIZKZ1fcjgsTFobg",
+        "alias": "fortune-wok-to-table-denver", "name": "Fortune Wok to Table", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/aVmP8cWwrCsLWWjwx8wvjg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/fortune-wok-to-table-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 389, "categories": [{"alias": "noodles", "title": "Noodles"},
+        {"alias": "dimsum", "title": "Dim Sum"}, {"alias": "shanghainese", "title":
+        "Shanghainese"}], "rating": 4.5, "coordinates": {"latitude": 39.72124, "longitude":
+        -104.9543}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "2817 E 3rd Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80206", "country": "US", "state": "CO", "display_address": ["2817 E 3rd Ave",
+        "Denver, CO 80206"]}, "phone": "+13033217788", "display_phone": "(303) 321-7788",
+        "distance": 2093.330545587293}], "total": 1200, "region": {"center": {"longitude":
+        -104.97024536132812, "latitude": 39.73552421220229}}}'
+  recorded_at: Tue, 18 Oct 2022 23:51:54 GMT
 recorded_with: VCR 6.1.0
