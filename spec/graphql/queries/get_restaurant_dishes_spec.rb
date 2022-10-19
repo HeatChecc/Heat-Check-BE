@@ -3,9 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe Types::QueryType, type: :request do
-  describe '.restaurant(id: )', vcr: 'denver_restaurant' do
+  describe '.restaurant(id: )', :vcr do
     before do
-      @restaurant = RestaurantsFacade.restaurants_near('Denver').first
+      @id = "Sk89ZllCbWVqA4M_MoJ7Lg"
+      @restaurant = RestaurantsFacade.get_restaurant(@id)
       @hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: @restaurant.id.to_s,
                                 spice_rating: 2)
       @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: @restaurant.id.to_s, spice_rating: 4)
@@ -36,7 +37,7 @@ RSpec.describe Types::QueryType, type: :request do
 
   def query
     <<~GQL
-      { restaurant(id: "#{@restaurant.id}", location: "#{@restaurant.city}") {
+      { restaurant(id: "#{@restaurant.id}") {
         id
         name
         rating
