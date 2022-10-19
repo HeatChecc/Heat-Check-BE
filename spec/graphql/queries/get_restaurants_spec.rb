@@ -10,7 +10,7 @@ RSpec.describe Types::QueryType, type: :request do
       data = json['data']['restaurants']
       data.each do |restaurant|
         expect(restaurant['id']).to be_a(String)
-        expect(restaurant['city']).to eq('Denver, CO')
+        expect(restaurant['city']).to include('CO')
       end
     end
   end

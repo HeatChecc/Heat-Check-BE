@@ -7,7 +7,7 @@ RSpec.describe 'RestaurantsFacade' do
     restaurants = RestaurantsFacade.restaurants_near('Denver')
     expect(restaurants).to be_a(Array)
     expect(restaurants).to be_all(Restaurant)
-    expect(restaurants.length).to eq(5)
+    expect(restaurants.length).to eq(20)
   end
 
   it 'errors gracefully', vcr: 'bad_restaurants' do
