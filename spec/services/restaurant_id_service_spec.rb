@@ -23,6 +23,6 @@ RSpec.describe RestaurantsService do
     id = ''
     response = RestaurantsService.get_restaurant(id)
     expect(response).to eq({ "error": { "code": 'NOT_FOUND', "description": "Resource could not be found.",
-                                        }})
+                                        }})                                  
   end
 end
