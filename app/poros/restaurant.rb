@@ -12,6 +12,7 @@ class Restaurant
               :lat,
               :lon,
               :city,
+              :dishes,
               :id
 
   def initialize(data = {})
@@ -31,5 +32,9 @@ class Restaurant
 
   def nil_check(attribute)
     ['', nil].include?(attribute) ? 'Not found' : attribute
+  end
+
+  def dishes
+    Dish.where(yelp_id: @id)
   end
 end

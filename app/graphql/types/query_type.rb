@@ -38,5 +38,15 @@ module Types
     def restaurants(location:)
       RestaurantsFacade.restaurants_near(location)
     end
+
+    field :restaurant, Types::RestaurantType, null: false do
+      argument :id, String, required: true
+      argument :location, String, required: true
+    end
+
+    def restaurant(id:, location:)
+      results = RestaurantsFacade.restaurants_near(location)
+      restaurant = results.select { |r| r.id == id}.first
+    end
   end
 end

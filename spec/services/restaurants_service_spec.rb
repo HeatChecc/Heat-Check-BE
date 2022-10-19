@@ -10,7 +10,7 @@ RSpec.describe RestaurantsService do
     response[:businesses].each do |restaurant|
       expect(restaurant).to have_key(:name)
       expect(restaurant).to have_key(:rating)
-      expect(restaurant).to have_key(:price)
+      # expect(restaurant).to have_key(:price)
       expect(restaurant).to have_key(:image_url)
       expect(restaurant).to have_key(:url)
       expect(restaurant).to have_key(:categories)

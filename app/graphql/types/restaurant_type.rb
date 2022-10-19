@@ -14,7 +14,7 @@ module Types
     field :lat, String
     field :lon, String
     field :city, String
-    field :dishes, [Types::DishType], null: true
+    field :dishes, [Types::DishType]
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
