@@ -11,4 +11,9 @@ class RestaurantsFacade
       []
     end
   end
+
+  def self.get_restaurant(id)
+    restaurant = RestaurantsService.get_restaurant(id)
+    Restaurant.new(restaurant)
+  end
 end
