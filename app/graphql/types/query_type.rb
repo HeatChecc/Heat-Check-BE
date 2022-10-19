@@ -5,7 +5,12 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    # field :users, [Types::UserType], null: false
+    field :users,
+          [Types::UserType], null: false
+
+    def users
+      User.all
+    end
 
     field :user, Types::UserType, null: false do
       argument :id, ID, required: true
@@ -15,12 +20,26 @@ module Types
       User.find(id)
     end
 
+    field :dishes,
+          [Types::DishType], null: false
+
+    def dishes
+      Dish.all
+    end
+
     field :dish, Types::DishType, null: false do
       argument :id, ID, required: true
     end
 
     def dish(id:)
       Dish.find(id)
+    end
+
+    field :reviews,
+          [Types::ReviewType], null: false
+
+    def reviews
+      Review.all
     end
 
     field :review, Types::ReviewType, null: false do
@@ -46,7 +65,7 @@ module Types
 
     def restaurant(id:, location:)
       results = RestaurantsFacade.restaurants_near(location)
-      restaurant = results.select { |r| r.id == id}.first
+      restaurant = results.select { |r| r.id == id }.first
     end
   end
 end
