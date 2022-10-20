@@ -27,6 +27,15 @@ module Types
       Dish.all
     end
 
+    field :hottest_dishes,  [Types::DishType], null: false do
+      argument :amt, Integer, required: true
+    end
+
+    def hottest_dishes(amt)
+      n = amt[:amt]
+      Dish.hottest(n)
+    end
+
     field :dish, Types::DishType, null: false do
       argument :id, ID, required: true
     end
