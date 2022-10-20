@@ -6,4 +6,8 @@ class Dish < ApplicationRecord
   validates_presence_of :yelp_id
   has_many :reviews, dependent: :destroy
   has_many :users, through: :reviews
+
+  def self.hottest(amt)
+    Dish.order(spice_rating: :desc).limit(amt)
+  end
 end
