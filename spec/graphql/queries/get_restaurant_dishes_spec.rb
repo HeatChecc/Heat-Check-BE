@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Types::QueryType, type: :request do
   describe '.restaurant(id: )', :vcr do
     before do
-      @id = "Sk89ZllCbWVqA4M_MoJ7Lg"
+      @id = 'Sk89ZllCbWVqA4M_MoJ7Lg'
       @restaurant = RestaurantsFacade.get_restaurant(@id)
       @hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: @restaurant.id.to_s,
                                 spice_rating: 2)
