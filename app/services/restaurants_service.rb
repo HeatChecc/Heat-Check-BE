@@ -5,7 +5,7 @@ class RestaurantsService
     response = conn.get("#{id}")
     parse_json(response)
   end
-  
+
   def self.restaurants_near(location)
     response = conn.get('search') do |route|
       route.params['limit'] = '20'
