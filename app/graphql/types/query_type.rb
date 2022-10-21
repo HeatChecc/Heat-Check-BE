@@ -27,7 +27,7 @@ module Types
       Dish.all
     end
 
-    field :hottest_dishes,  [Types::DishType], null: false do
+    field :hottest_dishes, [Types::DishType], null: false do
       argument :amt, Integer, required: true
     end
 
