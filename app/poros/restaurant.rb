@@ -38,3 +38,8 @@ class Restaurant
     Dish.where(yelp_id: @id)
   end
 end
+
+  # def heat_rating
+  #   # dishes = Dish.where(yelp_id: @id).hottest(5)
+  #   binding.pry
+  # end

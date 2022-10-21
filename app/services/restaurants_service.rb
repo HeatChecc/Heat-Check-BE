@@ -2,7 +2,7 @@
 
 class RestaurantsService
   def self.get_restaurant(id)
-    response = conn.get("#{id}")
+    response = conn.get(id.to_s)
     parse_json(response)
   end
 
