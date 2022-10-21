@@ -6,8 +6,7 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :dish
 
-  def self.highest_rating 
+  def self.highest_rating
     Review.order(overall_rating: :desc)
   end
 end
-

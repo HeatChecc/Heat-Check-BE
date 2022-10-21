@@ -6,11 +6,11 @@ RSpec.describe Types::QueryType, type: :request do
   describe '.dishes' do
     before :each do
       @pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                              spice_rating: 3)
+                               spice_rating: 3)
       @hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                              spice_rating: 2)
+                                spice_rating: 2)
       @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                            spice_rating: 4)
+                              spice_rating: 4)
     end
 
     it 'can get dishes' do

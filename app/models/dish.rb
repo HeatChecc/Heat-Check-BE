@@ -13,13 +13,13 @@ class Dish < ApplicationRecord
 
   def self.popular_cuisine
     group(:cuisine_type)
-    .select(:cuisine_type)
-    .order(count: :desc)
-    .first.cuisine_type
+      .select(:cuisine_type)
+      .order(count: :desc)
+      .first.cuisine_type
   end
 
   def avg_rating
-    reviews.map {|r| r.overall_rating }.sum.to_f / reviews.length
+    reviews.map(&:overall_rating).sum.to_f / reviews.length
     # ratings = reviews
     # .select('reviews.*, avg(reviews.overall_rating) as average_rating')
     # .group('reviews.id')
