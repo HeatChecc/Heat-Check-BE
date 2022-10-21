@@ -9,4 +9,5 @@ class Review < ApplicationRecord
   def self.highest_rating
     Review.order(overall_rating: :desc)
   end
+
 end

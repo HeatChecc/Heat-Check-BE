@@ -99,18 +99,3 @@ RSpec.describe Restaurant do
     expect(@restaurant.dishes).to eq([dish_1, dish_2])
   end
 end
-
-# it 'can get a restaurants dishes' do
-#   dish_1 = Dish.create(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA', spice_rating: 3)
-#   dish_2 = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA',
-#                         spice_rating: 5)
-#   hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 2)
-#   burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
-#   gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
-#   toast_pepper = Dish.create!(name: 'toast pepper', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-#                               spice_rating: 5)
-#   green_chile = Dish.create!(name: 'green chile', cuisine_type: 'southwest', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-#                               spice_rating: 3)
-
-#   expect(@restaurant.heat_rating).to eq("?")
-# end

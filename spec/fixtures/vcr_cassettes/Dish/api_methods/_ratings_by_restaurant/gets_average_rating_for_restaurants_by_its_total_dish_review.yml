@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/Sk89ZllCbWVqA4M_MoJ7Lg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <yelp_token>
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Zipkin-Id:
+      - 3939a97ec12991c5
+      Ratelimit-Dailylimit:
+      - '5000'
+      Server:
+      - envoy
+      Ratelimit-Remaining:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-6k8dn; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2022-10-22T00:00:00+00:00'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-126-17-uswest2aprod
+      X-Extlb:
+      - 10-69-126-17-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 21 Oct 2022 23:36:27 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8276-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
+        "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=V9YGto484KTnLHyiUvXYzA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=V9YGto484KTnLHyiUvXYzA",
+        "phone": "+13037368818", "display_phone": "(303) 736-8818", "review_count":
+        108, "categories": [{"alias": "noodles", "title": "Noodles"}, {"alias": "szechuan",
+        "title": "Szechuan"}], "rating": 4.5, "location": {"address1": "703 S Colorado
+        Blvd", "address2": "", "address3": null, "city": "Denver", "zip_code": "80246",
+        "country": "US", "state": "CO", "display_address": ["703 S Colorado Blvd",
+        "Denver, CO 80246"], "cross_streets": ""}, "coordinates": {"latitude": 39.70269,
+        "longitude": -104.94143}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/gKgTIg2vbkgwW3rPXFlwAQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/jmLZnnYEij_IJv8z84ULng/o.jpg"],
+        "price": "$$", "hours": [{"open": [{"is_overnight": false, "start": "1100",
+        "end": "1500", "day": 2}, {"is_overnight": false, "start": "1600", "end":
+        "2030", "day": 2}, {"is_overnight": false, "start": "1100", "end": "1500",
+        "day": 3}, {"is_overnight": false, "start": "1600", "end": "2030", "day":
+        3}, {"is_overnight": false, "start": "1100", "end": "1500", "day": 4}, {"is_overnight":
+        false, "start": "1600", "end": "2030", "day": 4}, {"is_overnight": false,
+        "start": "1100", "end": "1500", "day": 5}, {"is_overnight": false, "start":
+        "1600", "end": "2030", "day": 5}, {"is_overnight": false, "start": "1100",
+        "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
+        "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
+        ["pickup", "delivery"]}'
+  recorded_at: Fri, 21 Oct 2022 23:36:27 GMT
+recorded_with: VCR 6.1.0
