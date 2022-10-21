@@ -16,6 +16,10 @@ module Mutations
           post '/graphql', params: { query: query }
           json = JSON.parse(response.body)
           data = json['data']['dish']
+          expect(data).to include({ 'name' => 'Pad Thai',
+                                    'cuisineType' => 'Thai',
+                                    'yelpId' => '123',
+                                    'spiceRating' => 2 })
         end
       end
 
@@ -33,7 +37,7 @@ module Mutations
               name
               cuisineType
               yelpId
-              spiceRating#{'      '}
+              spiceRating
               }
             }
         GQL
