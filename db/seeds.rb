@@ -22,3 +22,5 @@ Review.create!(description: 'yummers', overall_rating: 3, user_id: eli.id, dish_
 Review.create!(description: 'blammo', overall_rating: 5, user_id: phil.id, dish_id: green_chile.id)
 Review.create!(description: 'ouch', overall_rating: 1, user_id: ethan.id, dish_id: ghost_pepper.id)
 Review.create!(description: 'merp', overall_rating: 4, user_id: gauri.id, dish_id: pad_thai.id)
+Review.create!(description: 'burns so good', overall_rating: 4, user_id: phil.id, dish_id: gumbo.id)
+Review.create!(description: 'burns so bad', overall_rating: 2, user_id: ethan.id, dish_id: hot_wings.id)
