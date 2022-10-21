@@ -10,3 +10,4 @@ class Review < ApplicationRecord
     Review.order(overall_rating: :desc)
   end
 end
+

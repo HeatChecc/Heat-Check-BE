@@ -10,10 +10,19 @@ class Dish < ApplicationRecord
   def self.hottest(amt)
     Dish.order(spice_rating: :desc).limit(amt)
   end
+
+  def self.popular_cuisine
+    Dish.group(:cuisine_type)
+    .select(:cuisine_type)
+    .order("count(*) desc")
+    .first.cuisine_type
+  end
 end
+
 
   # def self.highest_count
   #   .select("count('dishes.*) as count")
   #   .group("dishes.yelp_id")
   #   .order(count: :desc)
   # end
+
