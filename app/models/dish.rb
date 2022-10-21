@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Dish < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
   validates_presence_of :cuisine_type
   validates_presence_of :yelp_id
   has_many :reviews, dependent: :destroy
@@ -20,5 +20,11 @@ class Dish < ApplicationRecord
 
   def avg_rating
     reviews.average(:overall_rating).to_f
+  end
+
+  def self.ratings_by_restaurant(yelpid)
+    where('dishes.yelp_id = ?', "#{yelpid}") 
+    .joins(:reviews)
+    .select('dishes.yelp_id, avg(reviews.overall_rating) AS rating').group('dishes.yelp_id').pluck('rating')
   end
 end
