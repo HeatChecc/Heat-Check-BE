@@ -14,7 +14,8 @@ class Dish < ApplicationRecord
   def self.popular_cuisine
     Dish.group(:cuisine_type)
     .select(:cuisine_type)
-    .order("count(*) desc")
+    .order(count: :desc)
+    # .order("count(*) desc")
     .first.cuisine_type
   end
 end
