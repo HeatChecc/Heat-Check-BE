@@ -19,9 +19,6 @@ class Dish < ApplicationRecord
   end
 
   def avg_rating
-    reviews.map(&:overall_rating).sum.to_f / reviews.length
-    # ratings = reviews
-    # .select('reviews.*, avg(reviews.overall_rating) as average_rating')
-    # .group('reviews.id')
+    reviews.average(:overall_rating).to_f
   end
 end
