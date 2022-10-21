@@ -17,18 +17,34 @@ RSpec.describe Dish do
         pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                                 spice_rating: 3)
         hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                                 spice_rating: 2)
+                                spice_rating: 2)
         burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                               spice_rating: 4)
+                              spice_rating: 4)
         gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
         ghost_pepper = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                                     spice_rating: 5)
         green_chile = Dish.create!(name: 'green chile', cuisine_type: 'southwest', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                                   spice_rating: 3)
+                                  spice_rating: 3)
 
         spicy_boys = [ghost_pepper, burrito, gumbo]
-
         expect(Dish.hottest(3)).to eq(spicy_boys)
+      end
+    end
+    
+    context '.popular_cuisine' do 
+      it 'gets the most popular cuisine based on cuisine type count' do 
+        pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                                spice_rating: 3)
+        hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                                  spice_rating: 2)
+        burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                                spice_rating: 4)
+        gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
+        ghost_pepper = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                                    spice_rating: 5)
+        green_chile = Dish.create!(name: 'green chile', cuisine_type: 'southwest', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
+                                  spice_rating: 3)
+        expect(Dish.popular_cuisine).to eq('mexican')
       end
     end
   end
