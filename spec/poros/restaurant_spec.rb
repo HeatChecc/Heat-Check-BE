@@ -98,4 +98,32 @@ RSpec.describe Restaurant do
 
     expect(@restaurant.dishes).to eq([dish_1, dish_2])
   end
+
+  context 'reviews' do
+    before do
+      @ethan = User.create!(username: 'ethan', email: 'ethan@ethan.com')
+      @gauri = User.create!(username: 'gauri', email: 'gauri@gauri.com')
+      @eli = User.create!(username: 'eli', email: 'eli@eli.com')
+      @phil = User.create!(username: 'phil', email: 'phil@phil.com')
+      @dish_1 = Dish.create(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA', spice_rating: 3)
+      @dish_2 = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA', spice_rating: 5)
+      @dish_3 = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA', spice_rating: 2)
+      @review_1 = Review.create!(description: 'merp', overall_rating: 5, user_id: @gauri.id, dish_id: @dish_1.id)
+      @review_2 = Review.create!(description: 'merp', overall_rating: 3, user_id: @gauri.id, dish_id: @dish_2.id)
+      @review_3 = Review.create!(description: 'merp', overall_rating: 2, user_id: @gauri.id, dish_id: @dish_3.id)
+      @review_4 = Review.create!(description: 'merp', overall_rating: 2, user_id: @ethan.id, dish_id: @dish_1.id)
+      @review_5 = Review.create!(description: 'merp', overall_rating: 1, user_id: @ethan.id, dish_id: @dish_2.id)
+      @review_6 = Review.create!(description: 'merp', overall_rating: 4, user_id: @ethan.id, dish_id: @dish_3.id)
+      @review_7 = Review.create!(description: 'merp', overall_rating: 5, user_id: @eli.id, dish_id: @dish_1.id)
+      @review_8 = Review.create!(description: 'merp', overall_rating: 4, user_id: @eli.id, dish_id: @dish_2.id)
+      @review_9 = Review.create!(description: 'merp', overall_rating: 5, user_id: @eli.id, dish_id: @dish_3.id)
+      @review_10 = Review.create!(description: 'merp', overall_rating: 4, user_id: @phil.id, dish_id: @dish_1.id)
+      @review_11 = Review.create!(description: 'merp', overall_rating: 3, user_id: @phil.id, dish_id: @dish_2.id)
+      @review_12 = Review.create!(description: 'merp', overall_rating: 3, user_id: @phil.id, dish_id: @dish_3.id)
+    end
+
+    it 'can get a restaurants heat rating' do
+      expect(@restaurant.heat_rating).to eq(3.42)
+    end
+  end
 end

@@ -13,6 +13,7 @@ class Restaurant
               :lon,
               :city,
               :dishes,
+              :heat_rating,
               :id
 
   def initialize(data = {})
@@ -37,9 +38,8 @@ class Restaurant
   def dishes
     Dish.where(yelp_id: @id)
   end
-end
 
-# def heat_rating
-#   # dishes = Dish.where(yelp_id: @id).hottest(5)
-#   binding.pry
-# end
+  def heat_rating
+    (Dish.ratings_by_restaurant(@id)).round(2)
+  end
+end
