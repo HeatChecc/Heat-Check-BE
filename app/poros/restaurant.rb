@@ -40,6 +40,10 @@ class Restaurant
   end
 
   def heat_rating
-    (Dish.ratings_by_restaurant(@id)).round(2)
+    if self.dishes.present?
+      (Dish.ratings_by_restaurant(@id)).round(2)
+    else
+      "N/A"
+    end
   end
 end
