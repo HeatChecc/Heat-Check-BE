@@ -21,6 +21,13 @@ RSpec.describe Types::QueryType, type: :request do
       expect(data['spiceRating']).to eq(3)
       expect(data['reviews'].size).to eq(2)
     end
+    it 'will error out if no dish is passed through' do 
+      post '/graphql', params: { query: bad_query }
+      json = JSON.parse(response.body)
+
+      expect(json).to include("errors")
+      # require 'pry'; binding.pry 
+    end
   end
 
   def query
@@ -39,8 +46,29 @@ RSpec.describe Types::QueryType, type: :request do
               dishId
               userId
           }
-         }
         }
+      }
+
+    GQL
+  end
+  def bad_query
+    <<~GQL
+        {
+      dish(" ") {
+          id
+          name
+          cuisineType
+          yelpId
+          spiceRating
+          reviews {
+              id
+              description
+              overallRating
+              dishId
+              userId
+          }
+        }
+      }
 
     GQL
   end
