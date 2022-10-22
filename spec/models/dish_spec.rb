@@ -69,14 +69,31 @@ RSpec.describe Dish do
     end
   end
 
-  describe 'api methods' do
+  describe 'api methods', :vcr do
     context '.ratings_by_restaurant' do 
-      it 'gets average rating for restaurants by its total dish review', :vcr do 
-        restaurant = RestaurantsFacade.get_restaurant('Sk89ZllCbWVqA4M_MoJ7Lg')
-        hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'Sk89ZllCbWVqA4M_MoJ7Lg',
-                              spice_rating: 2)
+      it 'gets average rating for restaurants by its total dish review' do 
+        restaurant_1 = RestaurantsFacade.get_restaurant('Sk89ZllCbWVqA4M_MoJ7Lg')
+        restaurant_2 = RestaurantsFacade.get_restaurant('OT6MJNr8Gzd9nyf25dEl6g')
+        eli = User.create!(username: 'eli', email: 'eli@eli.com')
+        phil = User.create!(username: 'phil', email: 'phil@phil.com')
+
+        hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'Sk89ZllCbWVqA4M_MoJ7Lg', spice_rating: 2)
         gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: 'Sk89ZllCbWVqA4M_MoJ7Lg', spice_rating: 4)
-        expect(Dish.ratings_by_restaurant('Sk89ZllCbWVqA4M_MoJ7Lg')).to eq(2.1)
+        pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 3)
+        ghost_pepper = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 5)
+
+        review_1 = Review.create!(description: 'yummers', overall_rating: 4, user_id: phil.id, dish_id: hot_wings.id)
+        review_2 = Review.create!(description: 'blammo', overall_rating: 2, user_id: eli.id, dish_id: hot_wings.id)
+        review_3 = Review.create!(description: 'blammo', overall_rating: 3, user_id: phil.id, dish_id: gumbo.id)
+        review_4 = Review.create!(description: 'blammo', overall_rating: 1, user_id: eli.id, dish_id: gumbo.id) 
+        review_5 = Review.create!(description: 'blammo', overall_rating: 2, user_id: phil.id, dish_id: pad_thai.id)
+        review_6 = Review.create!(description: 'blammo', overall_rating: 5, user_id: eli.id, dish_id: pad_thai.id) 
+        review_7 = Review.create!(description: 'blammo', overall_rating: 3, user_id: phil.id, dish_id: ghost_pepper.id)
+        review_8 = Review.create!(description: 'blammo', overall_rating: 1, user_id: eli.id, dish_id: ghost_pepper.id)
+
+
+        expect(Dish.ratings_by_restaurant("#{restaurant_1.id}")).to eq(2.5)
+        expect(Dish.ratings_by_restaurant("#{restaurant_2.id}")).to eq(2.75)
       end
     end
   end

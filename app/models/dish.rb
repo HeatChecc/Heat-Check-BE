@@ -23,8 +23,9 @@ class Dish < ApplicationRecord
   end
 
   def self.ratings_by_restaurant(yelpid)
-    where('dishes.yelp_id = ?', "#{yelpid}") 
+    where('dishes.yelp_id = ?', "#{yelpid}")
     .joins(:reviews)
-    .select('dishes.yelp_id, avg(reviews.overall_rating) AS rating').group('dishes.yelp_id').pluck('rating')
+    .select('dishes.reviews, reviews.overall_rating')
+    .average('reviews.overall_rating').to_f
   end
 end
