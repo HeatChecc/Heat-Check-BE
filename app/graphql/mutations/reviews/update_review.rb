@@ -10,8 +10,11 @@ module Mutations
 
       def resolve(attributes)
         review = Review.where(id: attributes[:id]).first
-        review.update(attributes)
-        review
+        if review.update(attributes)
+          review
+        else
+          raise GraphQL::ExecutionError, review.errors.full_messages.join(", ")
+        end
       end
     end
   end

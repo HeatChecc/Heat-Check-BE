@@ -8,9 +8,15 @@ module Mutations
       argument :cuisine_type, String, required: true
       argument :spice_rating, Integer, required: true
       type Types::DishType
+      
 
       def resolve(attributes)
-        Dish.create(attributes)
+        dish = Dish.new(attributes)
+        if dish.save
+          dish 
+        else
+          raise GraphQL::ExecutionError, dish.errors.full_messages.join(", ")
+        end
       end
     end
   end

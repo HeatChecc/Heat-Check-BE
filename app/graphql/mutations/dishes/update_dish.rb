@@ -12,8 +12,11 @@ module Mutations
 
       def resolve(attributes)
         dish = Dish.where(id: attributes[:id]).first
-        dish.update(attributes)
-        dish
+        if dish.update(attributes)
+          dish
+        else
+          raise GraphQL::ExecutionError, dish.errors.full_messages.join(", ")
+        end
       end
     end
   end

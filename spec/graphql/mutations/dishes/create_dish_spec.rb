@@ -21,6 +21,16 @@ module Mutations
                                     'yelpId' => '123',
                                     'spiceRating' => 2 })
         end
+
+        it 'returns error messages if dish parameters invalid' do
+          post '/graphql', params: { query: bad_query }
+          json = JSON.parse(response.body) 
+          result = json["data"]["dish"]
+          messages = json["errors"].first["message"]
+
+          expect(result).to eq(nil)
+          expect(messages).to eq("Name can't be blank, Cuisine type can't be blank, Yelp can't be blank")
+        end
       end
 
       def query
@@ -41,6 +51,26 @@ module Mutations
               }
             }
         GQL
+      end
+
+      def bad_query
+        <<~GQL
+        mutation {
+          dish: createDish(
+            input: {
+              name: ""
+              cuisineType: ""
+              yelpId: ""
+              spiceRating: 0
+            }
+            )  {
+              name
+              cuisineType
+              yelpId
+              spiceRating
+              } 
+        }
+      GQL
       end
     end
   end

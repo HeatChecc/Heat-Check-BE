@@ -36,6 +36,34 @@ module Mutations
           expect(data['review']['overallRating']).to eq(2)
           expect(data['review']['id']).to eq(@review_1.id.to_s)
         end
+
+        it 'does not update if invalid params' do
+          post '/graphql', params: { query: bad_query }
+          json = JSON.parse(response.body)
+          data = json['data']['review']
+          messages = json['errors'].first['message']
+
+          expect(data).to eq(nil)
+          expect(messages).to eq("Description can't be blank")
+        end
+
+        def bad_query
+          <<~GQL
+          mutation {
+            review: updateReview(
+                        input: {
+                          description: ""
+                          overallRating: 2
+                          id: "#{@review_1.id}"
+                        }
+                ) {
+                    description
+                    overallRating
+                    id
+                  }
+              }
+          GQL
+        end
       end
     end
   end
