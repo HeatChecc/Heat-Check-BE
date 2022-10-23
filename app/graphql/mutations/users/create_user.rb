@@ -8,7 +8,12 @@ module Mutations
       type Types::UserType
 
       def resolve(attributes)
-        User.create(attributes)
+        user = User.new(attributes)
+        if user.save
+          user
+        else
+          raise GraphQL::ExecutionError, user.errors.full_messages.join(", ")
+        end
       end
     end
   end
