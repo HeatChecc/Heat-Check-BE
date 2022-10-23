@@ -22,6 +22,16 @@ module Mutations
           )
         end
 
+        it 'does not update if invalid params' do
+          post '/graphql', params: { query: bad_query }
+          json = JSON.parse(response.body)
+          data = json['data']['dish']
+          messages = json['errors'].first['message']
+
+          expect(data).to eq(nil)
+          expect(messages).to eq("Name can't be blank, Cuisine type can't be blank, Yelp can't be blank")
+        end
+
         def query
           <<~GQL
             mutation {
@@ -43,7 +53,30 @@ module Mutations
             }
           GQL
         end
+
+        def bad_query
+            <<~GQL
+            mutation {
+              dish: updateDish(
+                input: {
+                  id: "#{@dish_1.id}"
+                  name: ""
+                  cuisineType: ""
+                  yelpId: ""
+                  spiceRating: 9
+                }
+              ) {
+                id
+                name
+                cuisineType
+                yelpId
+                spiceRating
+              }
+            }
+          GQL
+        end
       end
+
     end
   end
 end
