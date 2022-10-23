@@ -23,7 +23,7 @@ module Mutations
         end
 
         it 'returns error messages if dish parameters invalid' do
-          post '/graphql', params: { query: bad }
+          post '/graphql', params: { query: bad_query }
           json = JSON.parse(response.body) 
           result = json["data"]["dish"]
           messages = json["errors"].first["message"]
@@ -53,7 +53,7 @@ module Mutations
         GQL
       end
 
-      def bad
+      def bad_query
         <<~GQL
         mutation {
           dish: createDish(

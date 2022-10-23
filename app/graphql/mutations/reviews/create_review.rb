@@ -10,7 +10,12 @@ module Mutations
       type Types::ReviewType
 
       def resolve(attributes)
-        Review.create(attributes)
+        review = Review.new(attributes)
+        if review.save
+          review 
+        else
+          raise GraphQL::ExecutionError, review.errors.full_messages.join(", ")
+        end
       end
     end
   end
