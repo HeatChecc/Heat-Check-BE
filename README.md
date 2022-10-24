@@ -371,16 +371,18 @@ mutation {
 ```   
 
 ### 🔥 Local Setup
-1. Fork and clone the repo to your local machine with SSH: git clone git@github.com:HeatChecc/Heat-Check-BE.git
+
+1. Fork and clone the repo to your local machine with SSH: `git clone git@github.com:HeatChecc/Heat-Check-BE.git`
+
 2 .Register for external API keys:
   * [Yelp API key](https://www.yelp.com/developers/v3/manage_app)
-3. Install gems and dependencies: bundle install
-4. Configure API keys by running bundle exec figaro install and then adding keys to application.yml file:
+3. Install gems and dependencies: `bundle install`
+4. Configure API keys by running `bundle exec figaro install` and then adding keys to `application.yml` file:
   * yelp_token: your_key_here
-5. Set up database: rails db:{drop,create,migrate,seed}
-6. Run test suite: bundle exec rspec
-7. Start up your local server: rails s
-8. Visit the endpoint url  http://localhost:3000/graphiql to consume the API locally.
+5. Set up database: `rails db:{drop,create,migrate,seed}`
+6. Run test suite: `bundle exec rspec`
+7. Start up your local server: `rails s`
+8. Visit the endpoint url  `http://localhost:3000/graphiql` to consume the API locally.
 
 
 ### 🔥 Contributors
