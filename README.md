@@ -384,12 +384,12 @@ mutation {
 ### 🔥 Contributors
 
 ### Back-End Team
-* Phillip Stewart • [Github](https://github.com/philmarcu) • [LinkedIn](https://www.linkedin.com/in/phillip-stewart-15497183/)
-* Eli Sachs • [Github](https://github.com/easachs) • [LinkedIn](https://www.linkedin.com/in/easachs/)
-* Gauri Joshi • [Github](https://github.com/gaurijo) • [LinkedIn](https://www.linkedin.com/in/gaurijo/)
-* Ethan Nguyen • [Github](https://github.com/Ethan-t-n) • [LinkedIn](https://www.linkedin.com/in/ethan-nguyen-82b398233/)
+* 🌶 Phillip Stewart 🌶 • [Github](https://github.com/philmarcu) • [LinkedIn](https://www.linkedin.com/in/phillip-stewart-15497183/)
+* 🌶 Eli Sachs 🌶 • [Github](https://github.com/easachs) • [LinkedIn](https://www.linkedin.com/in/easachs/)
+* 🌶 Gauri Joshi 🌶 • [Github](https://github.com/gaurijo) • [LinkedIn](https://www.linkedin.com/in/gaurijo/)
+* 🥵 Ethan Nguyen 🥵 • [Github](https://github.com/Ethan-t-n) • [LinkedIn](https://www.linkedin.com/in/ethan-nguyen-82b398233/)
 
 ### Front-End Team
-* David Daw • [Github](https://github.com/davidhdaw) • [LinkedIn](https://www.linkedin.com/in/david-daw-04aa36237/)
-* Ivy Nguyen • [Github](https://github.com/INguyen22) • [LinkedIn](https://www.linkedin.com/in/ivy-nguyen-051b27212/)
-* Cleveland Ticoalu • [Github](https://github.com/cleveland231) • [LinkedIn](https://www.linkedin.com/in/cleveland-ticoalu/)
+* 🌶 David Daw 🌶 • [Github](https://github.com/davidhdaw) • [LinkedIn](https://www.linkedin.com/in/david-daw-04aa36237/)
+* 🌶 Ivy Nguyen 🌶 • [Github](https://github.com/INguyen22) • [LinkedIn](https://www.linkedin.com/in/ivy-nguyen-051b27212/)
+* 🌶 Cleveland Ticoalu 🌶 • [Github](https://github.com/cleveland231) • [LinkedIn](https://www.linkedin.com/in/cleveland-ticoalu/)
