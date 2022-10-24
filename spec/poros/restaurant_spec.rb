@@ -128,11 +128,11 @@ RSpec.describe Restaurant do
       expect(@restaurant.heat_rating).to eq(3.42)
     end
 
-    it 'returns N/A if restaurant has no dishes', :vcr do
+    it 'returns not found if restaurant has no dishes', :vcr do
       restaurant_2 = RestaurantsFacade.get_restaurant("OT6MJNr8Gzd9nyf25dEl6g")
 
       expect(restaurant_2.dishes).to eq([])
-      expect(restaurant_2.heat_rating).to eq("N/A")
+      expect(restaurant_2.heat_rating).to eq("Not found")
     end
   end
 end

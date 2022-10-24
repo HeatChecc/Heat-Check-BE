@@ -43,7 +43,7 @@ class Restaurant
     if self.dishes.present?
       (Dish.ratings_by_restaurant(@id)).round(2)
     else
-      "N/A"
+      'Not found'
     end
   end
 end

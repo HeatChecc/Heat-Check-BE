@@ -26,7 +26,6 @@ RSpec.describe Types::QueryType, type: :request do
       json = JSON.parse(response.body)
 
       expect(json).to include("errors")
-      # require 'pry'; binding.pry 
     end
   end
 

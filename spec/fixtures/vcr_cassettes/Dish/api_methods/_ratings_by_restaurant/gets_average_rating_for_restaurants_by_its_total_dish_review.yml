@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4993'
-      Ratelimit-Resettime:
-      - '2022-10-23T00:00:00+00:00'
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-s8pw5; site=public_api_v3
-      X-Zipkin-Id:
-      - a4dd25ba3d0f95e1
+      - routing-main--uswest2-795c4bc4c5-np6fb; site=public_api_v3
       Server:
       - envoy
       X-B3-Sampled:
       - '0'
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Zipkin-Id:
+      - 33c1c50e21045649
+      Ratelimit-Remaining:
+      - '4988'
+      Ratelimit-Resettime:
+      - '2022-10-24T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
@@ -51,11 +51,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 22 Oct 2022 01:04:31 GMT
+      - Sun, 23 Oct 2022 19:04:20 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8272-DEN
+      - cache-den8278-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -88,7 +88,7 @@ http_interactions:
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         ["pickup", "delivery"]}'
-  recorded_at: Sat, 22 Oct 2022 01:04:31 GMT
+  recorded_at: Sun, 23 Oct 2022 19:04:20 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/OT6MJNr8Gzd9nyf25dEl6g
@@ -113,38 +113,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Server:
-      - envoy
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4987'
+      X-Zipkin-Id:
+      - 55c81754e58f6a14
+      Ratelimit-Resettime:
+      - '2022-10-24T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-pfx5m; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-vgncz; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2022-10-23T00:00:00+00:00'
-      Ratelimit-Remaining:
-      - '4992'
-      X-Zipkin-Id:
-      - 92bb16825e5fd55a
+      Server:
+      - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       X-Extlb:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 22 Oct 2022 01:04:32 GMT
+      - Sun, 23 Oct 2022 19:04:21 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8228-DEN
+      - cache-den8242-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -178,6 +178,6 @@ http_interactions:
         4}, {"is_overnight": false, "start": "1600", "end": "2000", "day": 4}, {"is_overnight":
         false, "start": "1130", "end": "1400", "day": 5}, {"is_overnight": false,
         "start": "1600", "end": "2000", "day": 5}], "hours_type": "REGULAR", "is_open_now":
-        true}], "transactions": ["pickup", "delivery"]}'
-  recorded_at: Sat, 22 Oct 2022 01:04:31 GMT
+        false}], "transactions": ["pickup", "delivery"]}'
+  recorded_at: Sun, 23 Oct 2022 19:04:21 GMT
 recorded_with: VCR 6.1.0
