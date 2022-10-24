@@ -1,6 +1,6 @@
-<img src= "https://user-images.githubusercontent.com/102835975/197584377-1c3bb80f-8b75-48ec-bbfa-90d29d676ec2.png" width=100% height=80%>
+# README For: 
 
-# README
+<img src= "https://user-images.githubusercontent.com/102835975/197584377-1c3bb80f-8b75-48ec-bbfa-90d29d676ec2.png" width=100% height=80%>
 
  # Project Overview
 🔥  Heat Check 🔥  is an app that helps spicy food lovers to explore restaurants that have an appropriate spice level to match. It allows users to search for restaurants with spicy dishes, add new dishes, review them, and rate their spiciness level.
