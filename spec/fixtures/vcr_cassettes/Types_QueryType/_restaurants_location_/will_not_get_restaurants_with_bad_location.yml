@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses
+    uri: https://api.yelp.com/v3/businesses/search?limit=20&location=?&sort_by=rating&term=spicy%20food
     body:
       encoding: US-ASCII
       string: ''
@@ -17,46 +17,46 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 400
+      message: Bad Request
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '79'
+      - '123'
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - 6fb767aabf6026e6
-      X-B3-Sampled:
-      - '0'
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-x2g8f; site=public_api_v3
+      - routing-main--uswest2-795c4bc4c5-rsd8m; site=public_api_v3
       Server:
       - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 53590d1f59d7b988
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-184-36-uswest2bprod
       X-Extlb:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-184-36-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Oct 2022 19:04:18 GMT
+      - Sun, 23 Oct 2022 19:06:55 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8277-DEN
+      - cache-den8238-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
     body:
       encoding: UTF-8
-      string: '{"error": {"code": "NOT_FOUND", "description": "Resource could not
-        be found."}}'
-  recorded_at: Sun, 23 Oct 2022 19:04:18 GMT
+      string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
+        execute search, try specifying a more exact location."}}'
+  recorded_at: Sun, 23 Oct 2022 19:06:55 GMT
 recorded_with: VCR 6.1.0

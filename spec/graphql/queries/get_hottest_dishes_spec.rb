@@ -39,7 +39,7 @@ module Mutations
           post '/graphql', params: { query: bad_query }
           json = JSON.parse(response.body)
           expect(json).to include("errors")
-          end
+        end
 
         def query
           <<~GQL
