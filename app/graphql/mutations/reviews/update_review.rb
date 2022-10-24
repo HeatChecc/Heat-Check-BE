@@ -13,7 +13,7 @@ module Mutations
         if review.update(attributes)
           review
         else
-          raise GraphQL::ExecutionError, review.errors.full_messages.join(", ")
+          raise GraphQL::ExecutionError, review.errors.full_messages.join(', ')
         end
       end
     end

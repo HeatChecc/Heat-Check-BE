@@ -21,12 +21,12 @@ module Mutations
         end
 
         it 'does not update if invalid params' do
-          @user_3 = User.create(username: "bob", email: "bob@bob.com")
+          @user_3 = User.create(username: 'bob', email: 'bob@bob.com')
           post '/graphql', params: { query: bad_query }
 
-          json = JSON.parse(response.body) 
-          result = json["data"]["user"]
-          messages = json["errors"].first["message"]
+          json = JSON.parse(response.body)
+          result = json['data']['user']
+          messages = json['errors'].first['message']
           expect(result).to eq(nil)
           expect(messages).to eq("Username can't be blank, Email can't be blank")
         end

@@ -21,11 +21,11 @@ RSpec.describe Types::QueryType, type: :request do
       expect(data['spiceRating']).to eq(3)
       expect(data['reviews'].size).to eq(2)
     end
-    it 'will error out if no dish is passed through' do 
+    it 'will error out if no dish is passed through' do
       post '/graphql', params: { query: bad_query }
       json = JSON.parse(response.body)
 
-      expect(json).to include("errors")
+      expect(json).to include('errors')
     end
   end
 
@@ -50,6 +50,7 @@ RSpec.describe Types::QueryType, type: :request do
 
     GQL
   end
+
   def bad_query
     <<~GQL
         {

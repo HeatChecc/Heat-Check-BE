@@ -8,7 +8,7 @@ RSpec.describe Review do
     it { should validate_presence_of :overall_rating }
   end
 
-  describe 'relationships' do 
+  describe 'relationships' do
     it { should belong_to(:user) }
     it { should belong_to(:dish) }
   end
@@ -24,14 +24,14 @@ RSpec.describe Review do
         pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                                 spice_rating: 3)
         hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                                spice_rating: 2)
+                                 spice_rating: 2)
         burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                              spice_rating: 4)
+                               spice_rating: 4)
         gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 4)
         ghost_pepper = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                                     spice_rating: 5)
         green_chile = Dish.create!(name: 'green chile', cuisine_type: 'southwest', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                                  spice_rating: 3)
+                                   spice_rating: 3)
         review1 = Review.create!(description: 'yummers', overall_rating: 3, user_id: eli.id, dish_id: burrito.id)
         review2 = Review.create!(description: 'blammo', overall_rating: 5, user_id: phil.id, dish_id: green_chile.id)
         review3 = Review.create!(description: 'ouch', overall_rating: 1, user_id: ethan.id, dish_id: ghost_pepper.id)
