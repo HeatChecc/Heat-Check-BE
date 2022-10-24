@@ -10,6 +10,7 @@ RSpec.describe Types::QueryType, type: :request do
     @review = Review.create!(description: 'blammo', overall_rating: 5, user_id: @phil.id, dish_id: @pad_thai.id)
     @review_2 = Review.create!(description: 'yummers', overall_rating: 3, user_id: @phil.id, dish_id: @gumbo.id)
   end
+
   describe '.user(id:)' do
     it 'can query a user reviews' do
       post '/graphql', params: { query: query }
@@ -19,12 +20,46 @@ RSpec.describe Types::QueryType, type: :request do
       expect(data['email']).to eq('phil@phil.com')
       expect(data['reviews'].size).to eq(2)
     end
+
+    it 'can query user reviews sad path' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
+    end
+
+    it 'can query user reviews sad path 2' do
+      post '/graphql', params: { query: bad_query }
+      json = JSON.parse(response.body)
+
+      expect(json).to have_key('errors')
+      expect(json['errors'].first['message']).to eq('User not found')
+    end
   end
 
   def query
     <<~GQL
         {
       user(id: "#{@phil.id}") {
+          id
+          username
+          email
+          reviews {
+              id
+              description
+              overallRating
+              dishId
+              userId
+          }
+         }
+        }
+
+    GQL
+  end
+
+  def bad_query
+    <<~GQL
+        {
+      user(id: "9999") {
           id
           username
           email

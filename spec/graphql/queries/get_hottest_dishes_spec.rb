@@ -41,6 +41,12 @@ module Mutations
           expect(json).to include('errors')
         end
 
+        it 'can query hottest dish sad path' do
+          post '/graphql', params: { query: nil }
+          json = JSON.parse(response.body)
+          expect(json['errors'].first['message']).to eq('No query string was present')
+        end
+
         def query
           <<~GQL
               { hottestDishes(amt: 3) {

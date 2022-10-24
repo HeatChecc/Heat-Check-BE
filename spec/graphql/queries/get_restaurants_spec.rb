@@ -20,6 +20,12 @@ RSpec.describe Types::QueryType, type: :request do
       result = json['data']['restaurants']
       expect(result).to eq([])
     end
+
+    it 'can query restaurants sad path' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
+    end
   end
 
   def query

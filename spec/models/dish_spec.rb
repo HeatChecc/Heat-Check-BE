@@ -46,6 +46,7 @@ RSpec.describe Dish do
       @review_11 = Review.create!(description: 'wammy', overall_rating: 3, user_id: @ethan.id, dish_id: @green_chile.id)
       @review_12 = Review.create!(description: 'wammy', overall_rating: 1, user_id: @gauri.id, dish_id: @green_chile.id)
     end
+
     describe '.class_methods' do
       context '.hottest' do
         it 'gets the highest spice_rating dishes' do
