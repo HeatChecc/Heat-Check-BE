@@ -15,7 +15,7 @@ module Mutations
         if dish.update(attributes)
           dish
         else
-          raise GraphQL::ExecutionError, dish.errors.full_messages.join(", ")
+          raise GraphQL::ExecutionError, dish.errors.full_messages.join(', ')
         end
       end
     end

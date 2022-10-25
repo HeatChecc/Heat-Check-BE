@@ -31,6 +31,12 @@ RSpec.describe Types::QueryType, type: :request do
         expect(review['dishId']).to be_a(Integer)
       end
     end
+
+    it 'can query reviews sad path' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
+    end
   end
 
   def query

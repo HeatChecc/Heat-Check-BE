@@ -23,9 +23,9 @@ module Mutations
 
         it 'returns errors if invalid user params' do
           post '/graphql', params: { query: bad_query }
-          json = JSON.parse(response.body) 
-          result = json["data"]["user"]
-          messages = json["errors"].first["message"]
+          json = JSON.parse(response.body)
+          result = json['data']['user']
+          messages = json['errors'].first['message']
 
           expect(result).to eq(nil)
           expect(messages).to eq("Username can't be blank, Email can't be blank")
@@ -50,18 +50,18 @@ module Mutations
 
       def bad_query
         <<~GQL
-        mutation {
-          user: createUser(
-          input: {
-            email: ""
-            username: ""
+          mutation {
+            user: createUser(
+            input: {
+              email: ""
+              username: ""
+            }
+          ) {
+            email
+            username
+            }
           }
-        ) {
-          email
-          username
-          }
-        }
-      GQL
+        GQL
       end
     end
   end

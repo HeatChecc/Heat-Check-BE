@@ -49,19 +49,19 @@ module Mutations
 
         def bad_query
           <<~GQL
-          mutation {
-            review: updateReview(
-                        input: {
-                          description: ""
-                          overallRating: 2
-                          id: "#{@review_1.id}"
-                        }
-                ) {
-                    description
-                    overallRating
-                    id
-                  }
-              }
+            mutation {
+              review: updateReview(
+                          input: {
+                            description: ""
+                            overallRating: 2
+                            id: "#{@review_1.id}"
+                          }
+                  ) {
+                      description
+                      overallRating
+                      id
+                    }
+                }
           GQL
         end
       end

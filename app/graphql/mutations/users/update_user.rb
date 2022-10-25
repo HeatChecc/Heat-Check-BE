@@ -13,7 +13,7 @@ module Mutations
         if user.update(attributes)
           user
         else
-          raise GraphQL::ExecutionError, user.errors.full_messages.join(", ")
+          raise GraphQL::ExecutionError, user.errors.full_messages.join(', ')
         end
       end
     end

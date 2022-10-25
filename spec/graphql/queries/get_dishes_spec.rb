@@ -6,7 +6,7 @@ RSpec.describe Types::QueryType, type: :request do
   describe '.dishes' do
     before :each do
       @pad_thai = Dish.create!(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
-                              spice_rating: 3)
+                               spice_rating: 3)
       @hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                                 spice_rating: 2)
       @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
@@ -24,6 +24,12 @@ RSpec.describe Types::QueryType, type: :request do
         expect(dish['spiceRating']).to be_a(Integer)
         expect(dish['yelpId']).to eq('OT6MJNr8Gzd9nyf25dEl6g')
       end
+    end
+
+    it 'can query dishes sad path' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
     end
   end
 

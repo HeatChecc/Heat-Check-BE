@@ -40,8 +40,8 @@ class Restaurant
   end
 
   def heat_rating
-    if self.dishes.present?
-      (Dish.ratings_by_restaurant(@id)).round(2)
+    if dishes.present?
+      Dish.ratings_by_restaurant(@id).round(2)
     else
       'Not found'
     end

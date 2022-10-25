@@ -33,11 +33,49 @@ RSpec.describe Types::QueryType, type: :request do
           ] }
       )
     end
+
+    it 'can query restaurant sad path', vcr: 'bad_restaurant_2' do
+      post '/graphql', params: { query: bad_query }
+      json = JSON.parse(response.body)
+      data = json['data']['restaurant']
+
+      expect(data).to include(
+        { 'id' => 'Not found',
+          'name' => 'Not found',
+          'rating' => 'Not found',
+          'address' => 'Not found' }
+      )
+    end
+
+    it 'can query restaurant sad path 2' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
+    end
   end
 
   def query
     <<~GQL
       { restaurant(id: "#{@restaurant.id}") {
+        id
+        name
+        rating
+        address
+        lat
+        lon
+        city
+        dishes {
+          name
+          spiceRating
+        }
+        }
+      }
+    GQL
+  end
+
+  def bad_query
+    <<~GQL
+      { restaurant(id: "9999") {
         id
         name
         rating

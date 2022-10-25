@@ -12,9 +12,9 @@ module Mutations
       def resolve(attributes)
         review = Review.new(attributes)
         if review.save
-          review 
+          review
         else
-          raise GraphQL::ExecutionError, review.errors.full_messages.join(", ")
+          raise GraphQL::ExecutionError, review.errors.full_messages.join(', ')
         end
       end
     end

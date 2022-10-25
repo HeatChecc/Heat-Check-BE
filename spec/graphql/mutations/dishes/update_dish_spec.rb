@@ -55,7 +55,7 @@ module Mutations
         end
 
         def bad_query
-            <<~GQL
+          <<~GQL
             mutation {
               dish: updateDish(
                 input: {
@@ -76,7 +76,6 @@ module Mutations
           GQL
         end
       end
-
     end
   end
 end

@@ -10,7 +10,7 @@ RSpec.describe User do
     it { should validate_uniqueness_of :username }
   end
 
-  describe 'relationships' do 
+  describe 'relationships' do
     it { should have_many(:reviews) }
     it { should have_many(:dishes).through(:reviews) }
   end

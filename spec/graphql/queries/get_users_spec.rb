@@ -22,6 +22,12 @@ RSpec.describe Types::QueryType, type: :request do
         expect(user['email']).to be_a(String)
       end
     end
+
+    it 'can query users sad path' do
+      post '/graphql', params: { query: nil }
+      json = JSON.parse(response.body)
+      expect(json['errors'].first['message']).to eq('No query string was present')
+    end
   end
 
   def query
