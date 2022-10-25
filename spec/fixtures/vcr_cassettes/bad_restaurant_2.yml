@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - f713aa3f2f59642c
-      Server:
-      - envoy
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-j4hw6; site=public_api_v3
-      Ratelimit-Remaining:
-      - '4974'
       Ratelimit-Resettime:
-      - '2022-10-25T00:00:00+00:00'
+      - '2022-10-26T00:00:00+00:00'
       X-B3-Sampled:
       - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-phzjp; site=public_api_v3
+      X-Zipkin-Id:
+      - dcbeb1cecfbf1a0f
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4923'
+      Server:
+      - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 24 Oct 2022 18:07:59 GMT
+      - Tue, 25 Oct 2022 19:23:20 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8259-DEN
+      - cache-den8265-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -68,7 +68,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
         "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=3gRykLgv5-_vxngoRlAFrQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=3gRykLgv5-_vxngoRlAFrQ",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "phone": "+13037368818", "display_phone": "(303) 736-8818", "review_count":
         108, "categories": [{"alias": "noodles", "title": "Noodles"}, {"alias": "szechuan",
         "title": "Szechuan"}], "rating": 4.5, "location": {"address1": "703 S Colorado
@@ -87,8 +87,8 @@ http_interactions:
         "1600", "end": "2030", "day": 5}, {"is_overnight": false, "start": "1100",
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
-        ["delivery", "pickup"]}'
-  recorded_at: Mon, 24 Oct 2022 18:07:59 GMT
+        ["pickup", "delivery"]}'
+  recorded_at: Tue, 25 Oct 2022 19:23:20 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/9999
@@ -117,28 +117,28 @@ http_interactions:
       - application/json
       Server:
       - envoy
-      X-Zipkin-Id:
-      - 4fd191faab61032e
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-l7zt9; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-gxrkg; site=public_api_v3
+      X-Zipkin-Id:
+      - ee733e7d05f8de2c
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       X-Extlb:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 24 Oct 2022 18:07:59 GMT
+      - Tue, 25 Oct 2022 19:23:20 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8259-DEN
+      - cache-den8242-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -147,5 +147,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Mon, 24 Oct 2022 18:07:59 GMT
+  recorded_at: Tue, 25 Oct 2022 19:23:20 GMT
 recorded_with: VCR 6.1.0

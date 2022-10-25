@@ -91,14 +91,15 @@ RSpec.describe Restaurant do
     expect(bad_restaurant.city).to eq('Not found')
   end
 
-  it 'can get a restaurants dishes' do
+  it 'can get a restaurants dishes', :vcr do
     dish_1 = Dish.create(name: 'pad thai', cuisine_type: 'thai', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA', spice_rating: 3)
     dish_2 = Dish.create!(name: 'ghost pepper', cuisine_type: 'pain', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA',
                           spice_rating: 5)
     dish_3 = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                           spice_rating: 2)
-
-    expect(@restaurant.dishes).to eq([dish_1, dish_2])
+    
+    expect(@restaurant.dishes.size).to eq(17)
+    expect( @restaurant.dishes.first(2)).to eq([dish_1, dish_2])
     expect(@restaurant.dishes).to_not include(dish_3)
   end
 
@@ -127,15 +128,19 @@ RSpec.describe Restaurant do
       @review_12 = Review.create!(description: 'merp', overall_rating: 3, user_id: @phil.id, dish_id: @dish_3.id)
     end
 
-    it 'can get a restaurants heat rating' do
+    it 'can get a restaurants heat rating', :vcr do
       expect(@restaurant.heat_rating).to eq(3.42)
     end
 
     it 'returns not found if restaurant has no dishes', :vcr do
-      restaurant_2 = RestaurantsFacade.get_restaurant('OT6MJNr8Gzd9nyf25dEl6g')
+      restaurant_2 = RestaurantsFacade.get_restaurant('yUXr2d9pomzJgmbPl8tlZQ') # - toro restaurant, uses biz/alias vs menu/alias in helper
 
       expect(restaurant_2.dishes).to eq([])
       expect(restaurant_2.heat_rating).to eq('Not found')
+    end
+
+    it 'can return a menu(dishes) based on its yelp alias', :vcr do
+      expect(@restaurant.dishes.size).to eq(18)
     end
   end
 end

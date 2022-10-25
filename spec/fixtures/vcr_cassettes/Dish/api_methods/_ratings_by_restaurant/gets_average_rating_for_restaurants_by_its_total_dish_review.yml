@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-np6fb; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2022-10-26T00:00:00+00:00'
+      Ratelimit-Remaining:
+      - '4919'
+      X-Zipkin-Id:
+      - c5608e6ad6f24ceb
       Server:
       - envoy
-      X-B3-Sampled:
-      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-h42fj; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
-      X-Zipkin-Id:
-      - 33c1c50e21045649
-      Ratelimit-Remaining:
-      - '4988'
-      Ratelimit-Resettime:
-      - '2022-10-24T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Oct 2022 19:04:20 GMT
+      - Tue, 25 Oct 2022 19:23:21 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8278-DEN
+      - cache-den8244-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -86,9 +86,9 @@ http_interactions:
         "start": "1100", "end": "1500", "day": 5}, {"is_overnight": false, "start":
         "1600", "end": "2030", "day": 5}, {"is_overnight": false, "start": "1100",
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
-        "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
-        ["pickup", "delivery"]}'
-  recorded_at: Sun, 23 Oct 2022 19:04:20 GMT
+        "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        ["delivery", "pickup"]}'
+  recorded_at: Tue, 25 Oct 2022 19:23:21 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/OT6MJNr8Gzd9nyf25dEl6g
@@ -113,38 +113,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-Zipkin-Id:
+      - 48d235588b93679f
+      Server:
+      - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-vkc8g; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4987'
-      X-Zipkin-Id:
-      - 55c81754e58f6a14
-      Ratelimit-Resettime:
-      - '2022-10-24T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-pfx5m; site=public_api_v3
+      - '4918'
       X-B3-Sampled:
       - '0'
-      Server:
-      - envoy
+      Ratelimit-Resettime:
+      - '2022-10-26T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-112-70-uswest2aprod
       X-Extlb:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-112-70-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Oct 2022 19:04:21 GMT
+      - Tue, 25 Oct 2022 19:23:21 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8242-DEN
+      - cache-den8255-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -178,6 +178,6 @@ http_interactions:
         4}, {"is_overnight": false, "start": "1600", "end": "2000", "day": 4}, {"is_overnight":
         false, "start": "1130", "end": "1400", "day": 5}, {"is_overnight": false,
         "start": "1600", "end": "2000", "day": 5}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": ["pickup", "delivery"]}'
-  recorded_at: Sun, 23 Oct 2022 19:04:21 GMT
+        true}], "transactions": ["delivery", "pickup"]}'
+  recorded_at: Tue, 25 Oct 2022 19:23:21 GMT
 recorded_with: VCR 6.1.0

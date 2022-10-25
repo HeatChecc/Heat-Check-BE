@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/OT6MJNr8Gzd9nyf25dEl6g
+    uri: https://api.yelp.com/v3/businesses/yUXr2d9pomzJgmbPl8tlZQ
     body:
       encoding: US-ASCII
       string: ''
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-7hx24; site=public_api_v3
-      Ratelimit-Remaining:
-      - '5000'
       Server:
       - envoy
-      Ratelimit-Resettime:
-      - '2022-10-25T00:00:00+00:00'
       X-B3-Sampled:
       - '0'
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4917'
       X-Zipkin-Id:
-      - e88fb4732c9d9a9e
+      - b7d93cfa9d8d3640
+      Ratelimit-Resettime:
+      - '2022-10-26T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-rcr9t; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
@@ -51,11 +51,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 24 Oct 2022 02:15:55 GMT
+      - Tue, 25 Oct 2022 19:23:25 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8276-DEN
+      - cache-den8236-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,29 +66,210 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"id": "OT6MJNr8Gzd9nyf25dEl6g", "alias": "busaba-boulder", "name":
-        "Busaba", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/jZHknqKPWVtklNsX4U4HEQ/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/busaba-boulder?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "phone": "+17203504927", "display_phone": "(720) 350-4927", "review_count":
-        6, "categories": [{"alias": "thai", "title": "Thai"}, {"alias": "noodles",
-        "title": "Noodles"}], "rating": 5.0, "location": {"address1": "4800 Baseline
-        Rd", "address2": "Ste A 110", "address3": null, "city": "Boulder", "zip_code":
-        "80303", "country": "US", "state": "CO", "display_address": ["4800 Baseline
-        Rd", "Ste A 110", "Boulder, CO 80303"], "cross_streets": ""}, "coordinates":
-        {"latitude": 39.99784799008801, "longitude": -105.2333000021389}, "photos":
-        ["https://s3-media1.fl.yelpcdn.com/bphoto/jZHknqKPWVtklNsX4U4HEQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/D7gieSfyb3MMfVcGAtdQ-A/o.jpg",
-        "https://s3-media2.fl.yelpcdn.com/bphoto/U7j87XZF3creLbw-OkIceQ/o.jpg"], "hours":
-        [{"open": [{"is_overnight": false, "start": "1130", "end": "1400", "day":
-        0}, {"is_overnight": false, "start": "1600", "end": "2000", "day": 0}, {"is_overnight":
-        false, "start": "1130", "end": "1400", "day": 1}, {"is_overnight": false,
-        "start": "1600", "end": "2000", "day": 1}, {"is_overnight": false, "start":
-        "1130", "end": "1400", "day": 2}, {"is_overnight": false, "start": "1600",
-        "end": "2000", "day": 2}, {"is_overnight": false, "start": "1130", "end":
-        "1400", "day": 3}, {"is_overnight": false, "start": "1600", "end": "2000",
-        "day": 3}, {"is_overnight": false, "start": "1130", "end": "1400", "day":
-        4}, {"is_overnight": false, "start": "1600", "end": "2000", "day": 4}, {"is_overnight":
-        false, "start": "1130", "end": "1400", "day": 5}, {"is_overnight": false,
-        "start": "1600", "end": "2000", "day": 5}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": ["delivery", "pickup"]}'
-  recorded_at: Mon, 24 Oct 2022 02:15:55 GMT
+      string: '{"id": "yUXr2d9pomzJgmbPl8tlZQ", "alias": "q-house-denver", "name":
+        "Q House", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/j6qTLzzfT31F92HxwrH0ww/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/q-house-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "phone": "+17207298887", "display_phone": "(720) 729-8887", "review_count":
+        230, "categories": [{"alias": "chinese", "title": "Chinese"}], "rating": 4.5,
+        "location": {"address1": "3421 E Colfax Ave", "address2": "", "address3":
+        null, "city": "Denver", "zip_code": "80206", "country": "US", "state": "CO",
+        "display_address": ["3421 E Colfax Ave", "Denver, CO 80206"], "cross_streets":
+        ""}, "coordinates": {"latitude": 39.7403344229824, "longitude": -104.947235575533},
+        "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/j6qTLzzfT31F92HxwrH0ww/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/Q-1haxodCCQ3T9YurQpXDg/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/m4qEoLWAYZ99Q6sJ6rVeCw/o.jpg"],
+        "price": "$$", "hours": [{"open": [{"is_overnight": false, "start": "1700",
+        "end": "2100", "day": 2}, {"is_overnight": false, "start": "1700", "end":
+        "2100", "day": 3}, {"is_overnight": false, "start": "1700", "end": "2100",
+        "day": 4}, {"is_overnight": false, "start": "1700", "end": "2100", "day":
+        5}, {"is_overnight": false, "start": "1700", "end": "2100", "day": 6}], "hours_type":
+        "REGULAR", "is_open_now": false}], "transactions": ["pickup", "delivery"]}'
+  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
+- request:
+    method: get
+    uri: https://www.yelp.com/menu/q-house-denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Zipkin-Id:
+      - ac88a06387c39f15
+      X-Node:
+      - www_all
+      - yelp-main-main--uswest2-5575db7677-p2ldx
+      X-B3-Sampled:
+      - '0'
+      Content-Security-Policy-Report-Only:
+      - 'report-uri https://www.yelp.com/csp_report_only?id=70d8574045c4ee3d&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666725805;
+        frame-ancestors ''self'' https://*.yelp.com; default-src https:; img-src https:
+        data: blob:; script-src https: data: ''unsafe-inline'' ''unsafe-eval'' blob:;
+        style-src https: ''unsafe-inline'' data:; font-src data: https:; child-src
+        https: yelp-webview://* yelp://* data:; object-src ''none''; worker-src blob:
+        https:; base-uri ''self''; form-action https:'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-phzjp; site=www
+      Set-Cookie:
+      - bse=767adac1929d40caa2cff1d706abc486; Domain=.yelp.com; Path=/; HttpOnly
+      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Mon, 20-Oct-2042
+        19:23:25 GMT
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      - wdi=1|7118AF27A1535373|0x1.8d60deb6aac1dp+30|7f842862f00ae941; Domain=.yelp.com;
+        Path=/; Max-Age=31536000; Expires=Wed, 25 Oct 2023 19:23:25 GMT; HttpOnly;
+        SameSite=Lax
+      Content-Security-Policy:
+      - 'report-uri https://www.yelp.com/csp_block?id=70d8574045c4ee3d&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666725805;
+        object-src ''self''; base-uri ''self'' https://*.yelpcdn.com https://*.adsrvr.org
+        https://6372968.fls.doubleclick.net; font-src ''self'' data: https:'
+      Pragma:
+      - no-cache
+      Link:
+      - https://s3-media0.fl.yelpcdn.com; rel=preconnect
+      - https://www.google-analytics.com; rel=preconnect
+      X-Zipkin-Span-Id:
+      - 818ee8212c03a247
+      Server:
+      - envoy
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Location:
+      - https://www.yelp.com/biz/q-house-denver
+      X-Content-Type-Options:
+      - nosniff
+      X-Cloudmap:
+      - routing_uswest2
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-112-70-uswest2aprod
+      X-Extlb:
+      - 10-69-112-70-uswest2aprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 25 Oct 2022 19:23:25 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8250-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1666725806.631637,VS0,VE109
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
+- request:
+    method: get
+    uri: https://www.yelp.com/menu/q-house-denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Location:
+      - https://www.yelp.com/biz/q-house-denver
+      X-Zipkin-Span-Id:
+      - 86cea87e06630361
+      Content-Security-Policy-Report-Only:
+      - 'report-uri https://www.yelp.com/csp_report_only?id=b699ce452a5374cb&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666725805;
+        frame-ancestors ''self'' https://*.yelp.com; default-src https:; img-src https:
+        data: blob:; script-src https: data: ''unsafe-inline'' ''unsafe-eval'' blob:;
+        style-src https: ''unsafe-inline'' data:; font-src data: https:; child-src
+        https: yelp-webview://* yelp://* data:; object-src ''none''; worker-src blob:
+        https:; base-uri ''self''; form-action https:'
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - 'report-uri https://www.yelp.com/csp_block?id=b699ce452a5374cb&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666725805;
+        object-src ''self''; base-uri ''self'' https://*.yelpcdn.com https://*.adsrvr.org
+        https://6372968.fls.doubleclick.net; font-src ''self'' data: https:'
+      X-Node:
+      - www_all
+      - yelp-main-main--uswest2-5575db7677-sr5nt
+      Set-Cookie:
+      - bse=beebf87264804cb1ab0f69c3fe9b3533; Domain=.yelp.com; Path=/; HttpOnly
+      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Mon, 20-Oct-2042
+        19:23:25 GMT
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      - wdi=1|4426326AAD2AEE17|0x1.8d60deb732b9dp+30|98d21ffced3ad4eb; Domain=.yelp.com;
+        Path=/; Max-Age=31536000; Expires=Wed, 25 Oct 2023 19:23:25 GMT; HttpOnly;
+        SameSite=Lax
+      Pragma:
+      - no-cache
+      X-Zipkin-Id:
+      - d657235dbfd5a9c0
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-h42fj; site=www
+      Link:
+      - https://s3-media0.fl.yelpcdn.com; rel=preconnect
+      - https://www.google-analytics.com; rel=preconnect
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cloudmap:
+      - routing_uswest2
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-173-40-uswest2bprod
+      X-Extlb:
+      - 10-69-173-40-uswest2bprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 25 Oct 2022 19:23:25 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8264-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1666725806.774885,VS0,VE97
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
 recorded_with: VCR 6.1.0
