@@ -21,6 +21,16 @@ module Mutations
           GQL
         end
 
+        it 'deletes dishes and reviews' do 
+          eli = User.create!(username: 'eli', email: 'eli@eli.com')
+          gauri = User.create!(username: 'gauri', email: 'gauri@gauri.com')
+          Review.create!(description: 'yummers', overall_rating: 3, user_id: eli.id, dish_id: @dish_1.id)
+          Review.create!(description: 'blammo', overall_rating: 5, user_id: gauri.id, dish_id: @dish_1.id)
+          expect(Review.count).to eq(2)
+          post '/graphql', params: { query: @query }
+          expect(Review.count).to eq(0)
+        end
+
         it 'deletes an existing dish' do
           expect(Dish.count).to eq(1)
           post '/graphql', params: { query: @query }
