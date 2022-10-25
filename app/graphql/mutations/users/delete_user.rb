@@ -8,6 +8,7 @@ module Mutations
 
       def resolve(attributes)
         user = User.where(id: attributes[:id]).first
+        user.reviews.destroy_all 
         user.delete
       end
     end
