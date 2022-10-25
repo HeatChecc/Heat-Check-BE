@@ -8,6 +8,7 @@ module Mutations
 
       def resolve(attributes)
         dish = Dish.where(id: attributes[:id]).first
+        dish.reviews.destroy_all
         dish.delete
       end
     end
