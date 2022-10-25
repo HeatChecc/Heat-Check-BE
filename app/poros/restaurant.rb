@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Restaurant
+  include DishHelper
   attr_reader :name,
               :rating,
               :price,
@@ -14,6 +15,7 @@ class Restaurant
               :city,
               :dishes,
               :heat_rating,
+              :alias,
               :id
 
   def initialize(data = {})
@@ -28,6 +30,7 @@ class Restaurant
     @lat = data[:coordinates] ? data[:coordinates][:latitude] : 'Not found'
     @lon = data[:coordinates] ? data[:coordinates][:longitude] : 'Not found'
     @city = data[:location] ? "#{data[:location][:city]}, #{data[:location][:state]}" : 'Not found'
+    @alias = nil_check(data[:alias])
     @id = nil_check(data[:id])
   end
 
@@ -36,9 +39,10 @@ class Restaurant
   end
 
   def dishes
+    html_dishes
     Dish.where(yelp_id: @id)
   end
-
+  
   def heat_rating
     if dishes.present?
       Dish.ratings_by_restaurant(@id).round(2)
