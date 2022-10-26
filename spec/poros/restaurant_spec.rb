@@ -141,6 +141,7 @@ RSpec.describe Restaurant do
 
     it 'can return a menu(dishes) based on its yelp alias', :vcr do
       expect(@restaurant.dishes.size).to eq(17)
+      expect(@restaurant.dishes.last.name).to eq("C Kid's Meat and Cheese Sandwich")
     end
   end
 end

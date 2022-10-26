@@ -26,36 +26,36 @@ http_interactions:
       - application/json
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-4vb82; site=public_api_v3
-      X-Zipkin-Id:
-      - 2a2885d9141a87e3
       Ratelimit-Dailylimit:
       - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-stvgb; site=public_api_v3
       Ratelimit-Remaining:
-      - '4669'
-      Server:
-      - envoy
+      - '4594'
       Ratelimit-Resettime:
       - '2022-10-27T00:00:00+00:00'
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - a67792e3f88a048e
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-126-17-uswest2aprod
       X-Extlb:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-126-17-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 15:11:44 GMT
+      - Wed, 26 Oct 2022 17:33:00 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8248-DEN
+      - cache-den8247-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -86,7 +86,7 @@ http_interactions:
         "start": "1100", "end": "1500", "day": 5}, {"is_overnight": false, "start":
         "1600", "end": "2030", "day": 5}, {"is_overnight": false, "start": "1100",
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
-        "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
-        ["pickup", "delivery"]}'
-  recorded_at: Wed, 26 Oct 2022 15:11:44 GMT
+        "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
+        ["delivery", "pickup"]}'
+  recorded_at: Wed, 26 Oct 2022 17:33:00 GMT
 recorded_with: VCR 6.1.0

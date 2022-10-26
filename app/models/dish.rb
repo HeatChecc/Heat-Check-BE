@@ -27,4 +27,10 @@ class Dish < ApplicationRecord
       .joins(:reviews)
       .average(:overall_rating).to_f
   end
+
+  def self.duplicate_dish
+    unique = self.select('DISTINCT ON(dishes.name, dishes.yelp_id) dishes.id')
+     .order(:name, :yelp_id, :id)
+    self.where.not(id: unique)
+  end
 end
