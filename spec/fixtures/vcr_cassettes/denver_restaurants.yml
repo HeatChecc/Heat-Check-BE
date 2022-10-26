@@ -26,32 +26,32 @@ http_interactions:
       - application/json
       Ratelimit-Dailylimit:
       - '5000'
+      X-Zipkin-Id:
+      - bde06680f640f26c
       Ratelimit-Remaining:
-      - '4909'
-      X-B3-Sampled:
-      - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-mggk7; site=public_api_v3
+      - '4895'
       Server:
       - envoy
-      X-Zipkin-Id:
-      - 130c119ac1f82232
       Ratelimit-Resettime:
       - '2022-10-27T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-xf2gq; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-130-205-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-130-205-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 01:07:08 GMT
+      - Wed, 26 Oct 2022 01:09:58 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
@@ -154,7 +154,7 @@ http_interactions:
         "review_count": 440, "categories": [{"alias": "indpak", "title": "Indian"},
         {"alias": "vegetarian", "title": "Vegetarian"}, {"alias": "vegan", "title":
         "Vegan"}], "rating": 4.5, "coordinates": {"latitude": 39.786902, "longitude":
-        -104.771731}, "transactions": ["delivery", "restaurant_reservation", "pickup"],
+        -104.771731}, "transactions": ["delivery", "pickup", "restaurant_reservation"],
         "price": "$$", "location": {"address1": "4968 N Tower Rd", "address2": null,
         "address3": "", "city": "Denver", "zip_code": "80249", "country": "US", "state":
         "CO", "display_address": ["4968 N Tower Rd", "Denver, CO 80249"]}, "phone":
@@ -186,7 +186,7 @@ http_interactions:
         "review_count": 134, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "asianfusion", "title": "Asian Fusion"}, {"alias": "noodles", "title": "Noodles"}],
         "rating": 4.5, "coordinates": {"latitude": 39.755057, "longitude": -105.020173},
-        "transactions": ["delivery", "restaurant_reservation", "pickup"], "location":
+        "transactions": ["delivery", "pickup", "restaurant_reservation"], "location":
         {"address1": "2637 W 26th Ave", "address2": null, "address3": "", "city":
         "Denver", "zip_code": "80211", "country": "US", "state": "CO", "display_address":
         ["2637 W 26th Ave", "Denver, CO 80211"]}, "phone": "+13039530291", "display_phone":
@@ -274,5 +274,5 @@ http_interactions:
         "Denver, CO 80014"]}, "phone": "+13036966688", "display_phone": "(303) 696-6688",
         "distance": 12612.444944923584}], "total": 1200, "region": {"center": {"longitude":
         -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Wed, 26 Oct 2022 01:07:08 GMT
+  recorded_at: Wed, 26 Oct 2022 01:09:58 GMT
 recorded_with: VCR 6.1.0
