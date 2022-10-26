@@ -9,6 +9,8 @@ RSpec.describe Types::QueryType, type: :request do
       @restaurant = RestaurantsFacade.get_restaurant(@id)
       @hot_wings = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: @restaurant.id.to_s,
                                 spice_rating: 2)
+      @burrito = Dish.create!(name: 'santiagos', cuisine_type: 'mexican', yelp_id: @restaurant.id.to_s, spice_rating: 4)
+      @gumbo = Dish.create!(name: 'gumbo', cuisine_type: 'mexican', yelp_id: @restaurant.id.to_s, spice_rating: 4)
     end
 
     it 'returns a restaurant & its dishes' do
@@ -20,7 +22,7 @@ RSpec.describe Types::QueryType, type: :request do
       expect(data['city']).to eq('Denver, CO')
       expect(data['rating']).to eq('4.5')
       expect(data['address']).to eq('703 S Colorado Blvd, Denver, CO 80246')
-      expect(data['dishes'].size).to eq(38)
+      expect(data['dishes'].size).to eq(3)
       expect(data['dishes']).to include({'name'=> @hot_wings.name, 'spiceRating'=>@hot_wings.spice_rating})
     end
 

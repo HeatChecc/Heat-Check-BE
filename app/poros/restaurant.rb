@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Restaurant
-  include DishHelper
+  # include DishHelper
   attr_reader :name,
               :rating,
               :price,
@@ -39,7 +39,7 @@ class Restaurant
   end
 
   def dishes
-    html_dishes
+    # html_dishes
     Dish.where(yelp_id: @id)
   end
   

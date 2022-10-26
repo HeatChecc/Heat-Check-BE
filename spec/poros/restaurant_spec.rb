@@ -98,7 +98,7 @@ RSpec.describe Restaurant do
     dish_3 = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g',
                           spice_rating: 2)
     
-    expect(@restaurant.dishes.size).to eq(17)
+    expect(@restaurant.dishes.size).to eq(2)
     expect( @restaurant.dishes.first(2)).to eq([dish_1, dish_2])
     expect(@restaurant.dishes).to_not include(dish_3)
   end
@@ -140,7 +140,7 @@ RSpec.describe Restaurant do
     end
 
     it 'can return a menu(dishes) based on its yelp alias', :vcr do
-      expect(@restaurant.dishes.size).to eq(18)
+      expect(@restaurant.dishes.size).to eq(3)
     end
   end
 end
