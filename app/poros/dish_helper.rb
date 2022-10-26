@@ -72,6 +72,7 @@ module DishHelper
   end
 
   def html_to_ruby
+    extra = []
     formatted.map do |dish_name|
       dish = Dish.create!(name: dish_name,
         cuisine_type: first_cuisine,
@@ -80,10 +81,10 @@ module DishHelper
                 )
       possible = Dish.where(name: dish.name)
       if possible.pluck(:yelp_id).size < 1
-        Dish.delete(dish.id)
+        extra = possible
       end
     end
-    formatted
+    formatted - extra
   end
 
   def html_dishes

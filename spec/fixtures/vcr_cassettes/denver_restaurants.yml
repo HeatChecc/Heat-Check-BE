@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-Zipkin-Id:
+      - 68fd8057ba37a8e5
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-vbpxp; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4725'
-      Ratelimit-Resettime:
-      - '2022-10-27T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-mggk7; site=public_api_v3
+      - '4675'
       Server:
       - envoy
-      X-B3-Sampled:
-      - '0'
-      X-Zipkin-Id:
-      - cb739cad1a5e6c46
+      Ratelimit-Resettime:
+      - '2022-10-27T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-130-205-uswest2bprod
       X-Extlb:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-130-205-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 14:58:25 GMT
+      - Wed, 26 Oct 2022 15:11:41 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8266-DEN
+      - cache-den8252-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -80,7 +80,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/himalayan-spice-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 82, "categories": [{"alias": "indpak", "title": "Indian"}],
         "rating": 5.0, "coordinates": {"latitude": 39.77442708558098, "longitude":
-        -105.04432613479163}, "transactions": ["pickup", "delivery"], "location":
+        -105.04432613479163}, "transactions": ["delivery", "pickup"], "location":
         {"address1": "4279 Tennsyon St", "address2": null, "address3": "", "city":
         "Denver", "zip_code": "80212", "country": "US", "state": "CO", "display_address":
         ["4279 Tennsyon St", "Denver, CO 80212"]}, "phone": "+17204853107", "display_phone":
@@ -143,7 +143,7 @@ http_interactions:
         "review_count": 490, "categories": [{"alias": "indpak", "title": "Indian"},
         {"alias": "vegan", "title": "Vegan"}, {"alias": "gluten_free", "title": "Gluten-Free"}],
         "rating": 4.5, "coordinates": {"latitude": 39.769626, "longitude": -105.028993785381},
-        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
         "3157 W 38th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
         "80211", "country": "US", "state": "CO", "display_address": ["3157 W 38th
         Ave", "Denver, CO 80211"]}, "phone": "+13034553127", "display_phone": "(303)
@@ -203,7 +203,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/bubu-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 166, "categories": [{"alias": "asianfusion", "title": "Asian
         Fusion"}], "rating": 4.5, "coordinates": {"latitude": 39.7476804, "longitude":
-        -104.9994096}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
+        -104.9994096}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
         {"address1": "1423 Larimer St", "address2": "", "address3": "", "city": "Denver",
         "zip_code": "80202", "country": "US", "state": "CO", "display_address": ["1423
         Larimer St", "Denver, CO 80202"]}, "phone": "+13039962685", "display_phone":
@@ -272,5 +272,5 @@ http_interactions:
         Ave", "Denver, CO 80206"]}, "phone": "+13033225939", "display_phone": "(303)
         322-5939", "distance": 1498.163504137593}], "total": 1200, "region": {"center":
         {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Wed, 26 Oct 2022 14:58:25 GMT
+  recorded_at: Wed, 26 Oct 2022 15:11:41 GMT
 recorded_with: VCR 6.1.0

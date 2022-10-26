@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4721'
       Ratelimit-Resettime:
       - '2022-10-27T00:00:00+00:00'
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-4j7lq; site=public_api_v3
+      - routing-main--uswest2-795c4bc4c5-stvgb; site=public_api_v3
       X-Zipkin-Id:
-      - 6e743a916b3e911a
+      - b00c94e5f1f68edc
       X-B3-Sampled:
       - '0'
       Server:
       - envoy
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4671'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 14:58:27 GMT
+      - Wed, 26 Oct 2022 15:11:44 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8259-DEN
+      - cache-den8233-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -87,8 +87,8 @@ http_interactions:
         "1600", "end": "2030", "day": 5}, {"is_overnight": false, "start": "1100",
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
-        ["pickup", "delivery"]}'
-  recorded_at: Wed, 26 Oct 2022 14:58:27 GMT
+        ["delivery", "pickup"]}'
+  recorded_at: Wed, 26 Oct 2022 15:11:44 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/9999
@@ -115,30 +115,30 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
       X-Zipkin-Id:
-      - '2020015628934748'
+      - 30c3af373d1d2dad
       Server:
       - envoy
+      X-B3-Sampled:
+      - '0'
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-jt8c9; site=public_api_v3
+      - routing-main--uswest2-795c4bc4c5-r4xhf; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 14:58:28 GMT
+      - Wed, 26 Oct 2022 15:11:44 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8228-DEN
+      - cache-den8267-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -147,5 +147,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Wed, 26 Oct 2022 14:58:28 GMT
+  recorded_at: Wed, 26 Oct 2022 15:11:44 GMT
 recorded_with: VCR 6.1.0
