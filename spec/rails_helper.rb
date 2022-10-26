@@ -70,6 +70,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('<yelp_token>') { ENV['yelp_token'] }
   config.configure_rspec_metadata!
+  config.default_cassette_options = { re_record_interval: 2.minutes }
 end
 
 Shoulda::Matchers.configure do |config|

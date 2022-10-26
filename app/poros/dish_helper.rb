@@ -28,7 +28,7 @@ module DishHelper
 
   def dish_filter
     possible = doc_results.uniq
-    ignore_list = [ "write", "yelp", "review", "reviews", "about", "sign", "services", "auto", "careers", "log", "restaurants", "business", "privacy", "policy", "members", "press", "trust", "safety", "content", "collections", "talk", "events", "support", "developers", "rss", "blog", "management", "photos", "photo" ]
+    ignore_list = [ "write", "menu", "yelp", "review", "reviews", "about", "sign", "services", "auto", "careers", "log", "restaurants", "business", "privacy", "policy", "members", "press", "trust", "safety", "content", "collections", "talk", "events", "support", "developers", "rss", "blog", "management", "photos", "photo" ]
     arr = []
     possible.each do |phrase|
       phrase.downcase.split(" ").each do |word|
@@ -71,13 +71,21 @@ module DishHelper
     cuisine[0]
   end
 
-  def html_dishes
+  def html_to_ruby
     formatted.map do |dish_name|
       Dish.create!(name: dish_name,
                    cuisine_type: first_cuisine,
                    yelp_id: @id,
                    spice_rating: nil
                )
+    end
+  end
+
+  def html_dishes
+    html_to_ruby
+    extra = Dish.where(name: @name)
+    if extra[0]
+      extra[0].destroy
     end
   end
 end

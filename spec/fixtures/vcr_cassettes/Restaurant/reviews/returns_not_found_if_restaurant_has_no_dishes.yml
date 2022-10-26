@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Resettime:
+      - '2022-10-27T00:00:00+00:00'
       Server:
       - envoy
       X-B3-Sampled:
       - '0'
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4917'
-      X-Zipkin-Id:
-      - b7d93cfa9d8d3640
-      Ratelimit-Resettime:
-      - '2022-10-26T00:00:00+00:00'
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-rcr9t; site=public_api_v3
+      - routing-main--uswest2-795c4bc4c5-d9xq9; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4899'
+      X-Zipkin-Id:
+      - c195c38d9a38a3ef
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Oct 2022 19:23:25 GMT
+      - Wed, 26 Oct 2022 01:07:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8236-DEN
+      - cache-den8221-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -82,8 +82,8 @@ http_interactions:
         "2100", "day": 3}, {"is_overnight": false, "start": "1700", "end": "2100",
         "day": 4}, {"is_overnight": false, "start": "1700", "end": "2100", "day":
         5}, {"is_overnight": false, "start": "1700", "end": "2100", "day": 6}], "hours_type":
-        "REGULAR", "is_open_now": false}], "transactions": ["pickup", "delivery"]}'
-  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
+        "REGULAR", "is_open_now": false}], "transactions": ["delivery", "pickup"]}'
+  recorded_at: Wed, 26 Oct 2022 01:07:13 GMT
 - request:
     method: get
     uri: https://www.yelp.com/menu/q-house-denver
@@ -108,50 +108,50 @@ http_interactions:
       - '0'
       Content-Type:
       - text/html; charset=UTF-8
-      X-Zipkin-Id:
-      - ac88a06387c39f15
-      X-Node:
-      - www_all
-      - yelp-main-main--uswest2-5575db7677-p2ldx
+      Set-Cookie:
+      - bse=9fa8c4c81b044a95a7d3d3e12c0a6021; Domain=.yelp.com; Path=/; HttpOnly
+      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Tue, 21-Oct-2042
+        01:07:14 GMT
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      - wdi=1|CC0B37309A00A37C|0x1.8d6221083ec4ep+30|2d15b18f70ffe35b; Domain=.yelp.com;
+        Path=/; Max-Age=31536000; Expires=Thu, 26 Oct 2023 01:07:14 GMT; HttpOnly;
+        SameSite=Lax
       X-B3-Sampled:
       - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-l7zt9; site=www
       Content-Security-Policy-Report-Only:
-      - 'report-uri https://www.yelp.com/csp_report_only?id=70d8574045c4ee3d&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666725805;
+      - 'report-uri https://www.yelp.com/csp_report_only?id=39db9488ebb0b3c6&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666746434;
         frame-ancestors ''self'' https://*.yelp.com; default-src https:; img-src https:
         data: blob:; script-src https: data: ''unsafe-inline'' ''unsafe-eval'' blob:;
         style-src https: ''unsafe-inline'' data:; font-src data: https:; child-src
         https: yelp-webview://* yelp://* data:; object-src ''none''; worker-src blob:
         https:; base-uri ''self''; form-action https:'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-phzjp; site=www
-      Set-Cookie:
-      - bse=767adac1929d40caa2cff1d706abc486; Domain=.yelp.com; Path=/; HttpOnly
-      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Mon, 20-Oct-2042
-        19:23:25 GMT
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      - wdi=1|7118AF27A1535373|0x1.8d60deb6aac1dp+30|7f842862f00ae941; Domain=.yelp.com;
-        Path=/; Max-Age=31536000; Expires=Wed, 25 Oct 2023 19:23:25 GMT; HttpOnly;
-        SameSite=Lax
-      Content-Security-Policy:
-      - 'report-uri https://www.yelp.com/csp_block?id=70d8574045c4ee3d&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666725805;
-        object-src ''self''; base-uri ''self'' https://*.yelpcdn.com https://*.adsrvr.org
-        https://6372968.fls.doubleclick.net; font-src ''self'' data: https:'
+      X-Zipkin-Id:
+      - fd6b1ab9d8473502
       Pragma:
       - no-cache
+      Location:
+      - https://www.yelp.com/biz/q-house-denver
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - envoy
       Link:
       - https://s3-media0.fl.yelpcdn.com; rel=preconnect
       - https://www.google-analytics.com; rel=preconnect
-      X-Zipkin-Span-Id:
-      - 818ee8212c03a247
-      Server:
-      - envoy
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Location:
-      - https://www.yelp.com/biz/q-house-denver
+      Content-Security-Policy:
+      - 'report-uri https://www.yelp.com/csp_block?id=39db9488ebb0b3c6&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666746434;
+        object-src ''self''; base-uri ''self'' https://*.yelpcdn.com https://*.adsrvr.org
+        https://6372968.fls.doubleclick.net; font-src ''self'' data: https:'
       X-Content-Type-Options:
       - nosniff
+      X-Node:
+      - www_all
+      - yelp-main-main--uswest2-f48777566-hws5f
+      X-Zipkin-Span-Id:
+      - 394b6e6d5bb4777a
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
@@ -163,21 +163,21 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Oct 2022 19:23:25 GMT
+      - Wed, 26 Oct 2022 01:07:14 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8250-DEN
+      - cache-den8234-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1666725806.631637,VS0,VE109
+      - S1666746434.033621,VS0,VE125
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
+  recorded_at: Wed, 26 Oct 2022 01:07:14 GMT
 - request:
     method: get
     uri: https://www.yelp.com/menu/q-house-denver
@@ -202,74 +202,74 @@ http_interactions:
       - '0'
       Content-Type:
       - text/html; charset=UTF-8
-      Location:
-      - https://www.yelp.com/biz/q-house-denver
-      X-Zipkin-Span-Id:
-      - 86cea87e06630361
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-s6qwm; site=www
+      X-Node:
+      - www_all
+      - yelp-main-main--uswest2-f48777566-mxxrd
+      Link:
+      - https://s3-media0.fl.yelpcdn.com; rel=preconnect
+      - https://www.google-analytics.com; rel=preconnect
+      X-B3-Sampled:
+      - '0'
+      Pragma:
+      - no-cache
+      X-Zipkin-Id:
+      - 1db092789c465354
+      Set-Cookie:
+      - bse=b021ff6047c34a85966694716771ce12; Domain=.yelp.com; Path=/; HttpOnly
+      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Tue, 21-Oct-2042
+        01:07:14 GMT
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      - wdi=1|A8CE78560FAD9AF7|0x1.8d622108e25d9p+30|336c27dc8faa631d; Domain=.yelp.com;
+        Path=/; Max-Age=31536000; Expires=Thu, 26 Oct 2023 01:07:14 GMT; HttpOnly;
+        SameSite=Lax
       Content-Security-Policy-Report-Only:
-      - 'report-uri https://www.yelp.com/csp_report_only?id=b699ce452a5374cb&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666725805;
+      - 'report-uri https://www.yelp.com/csp_report_only?id=38aaaf8832bc7bb7&page=csp_report_frame_directives%2Cfull_site_ssl_csp_report_directives&policy_hash=41d0c45536d2a082f11d1cd0e00fde7f&site=www&timestamp=1666746434;
         frame-ancestors ''self'' https://*.yelp.com; default-src https:; img-src https:
         data: blob:; script-src https: data: ''unsafe-inline'' ''unsafe-eval'' blob:;
         style-src https: ''unsafe-inline'' data:; font-src data: https:; child-src
         https: yelp-webview://* yelp://* data:; object-src ''none''; worker-src blob:
         https:; base-uri ''self''; form-action https:'
-      X-Content-Type-Options:
-      - nosniff
+      Location:
+      - https://www.yelp.com/biz/q-house-denver
       Content-Security-Policy:
-      - 'report-uri https://www.yelp.com/csp_block?id=b699ce452a5374cb&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666725805;
+      - 'report-uri https://www.yelp.com/csp_block?id=38aaaf8832bc7bb7&page=enforced_by_default_directives&policy_hash=4a31667603ab2e38c60aeeb09daa5097&site=www&timestamp=1666746434;
         object-src ''self''; base-uri ''self'' https://*.yelpcdn.com https://*.adsrvr.org
         https://6372968.fls.doubleclick.net; font-src ''self'' data: https:'
-      X-Node:
-      - www_all
-      - yelp-main-main--uswest2-5575db7677-sr5nt
-      Set-Cookie:
-      - bse=beebf87264804cb1ab0f69c3fe9b3533; Domain=.yelp.com; Path=/; HttpOnly
-      - hl=en_US; Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Mon, 20-Oct-2042
-        19:23:25 GMT
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      - wdi=1|4426326AAD2AEE17|0x1.8d60deb732b9dp+30|98d21ffced3ad4eb; Domain=.yelp.com;
-        Path=/; Max-Age=31536000; Expires=Wed, 25 Oct 2023 19:23:25 GMT; HttpOnly;
-        SameSite=Lax
-      Pragma:
-      - no-cache
-      X-Zipkin-Id:
-      - d657235dbfd5a9c0
-      Server:
-      - envoy
-      X-B3-Sampled:
-      - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-h42fj; site=www
-      Link:
-      - https://s3-media0.fl.yelpcdn.com; rel=preconnect
-      - https://www.google-analytics.com; rel=preconnect
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
+      X-Zipkin-Span-Id:
+      - 4653057abb3d428c
+      X-Content-Type-Options:
+      - nosniff
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Oct 2022 19:23:25 GMT
+      - Wed, 26 Oct 2022 01:07:14 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8264-DEN
+      - cache-den8260-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1666725806.774885,VS0,VE97
+      - S1666746434.194433,VS0,VE111
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 25 Oct 2022 19:23:25 GMT
+  recorded_at: Wed, 26 Oct 2022 01:07:14 GMT
 recorded_with: VCR 6.1.0

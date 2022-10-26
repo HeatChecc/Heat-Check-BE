@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Server:
-      - envoy
       Ratelimit-Dailylimit:
       - '5000'
-      X-Zipkin-Id:
-      - a9343099919bc7d6
       Ratelimit-Remaining:
-      - '4927'
-      Ratelimit-Resettime:
-      - '2022-10-26T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-wgc7m; site=public_api_v3
+      - '4909'
       X-B3-Sampled:
       - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-795c4bc4c5-mggk7; site=public_api_v3
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 130c119ac1f82232
+      Ratelimit-Resettime:
+      - '2022-10-27T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-130-205-uswest2bprod
       X-Extlb:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-130-205-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Oct 2022 19:23:18 GMT
+      - Wed, 26 Oct 2022 01:07:08 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8255-DEN
+      - cache-den8231-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,9 +66,19 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"businesses": [{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
-        "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+      string: '{"businesses": [{"id": "kNdv-g4T68wDHyT_EgbF8A", "alias": "himalayan-spice-denver-2",
+        "name": "Himalayan Spice", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/swlTvEXL5yVRzlOPWo4tYw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/himalayan-spice-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 82, "categories": [{"alias": "indpak", "title": "Indian"}],
+        "rating": 5.0, "coordinates": {"latitude": 39.77442708558098, "longitude":
+        -105.04432613479163}, "transactions": ["delivery", "pickup"], "location":
+        {"address1": "4279 Tennsyon St", "address2": null, "address3": "", "city":
+        "Denver", "zip_code": "80212", "country": "US", "state": "CO", "display_address":
+        ["4279 Tennsyon St", "Denver, CO 80212"]}, "phone": "+17204853107", "display_phone":
+        "(720) 485-3107", "distance": 7669.214171889074}, {"id": "Sk89ZllCbWVqA4M_MoJ7Lg",
+        "alias": "noodles-express-denver", "name": "Noodles Express", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 108, "categories": [{"alias": "noodles", "title": "Noodles"},
         {"alias": "szechuan", "title": "Szechuan"}], "rating": 4.5, "coordinates":
         {"latitude": 39.70269, "longitude": -104.94143}, "transactions": ["delivery",
@@ -79,7 +89,7 @@ http_interactions:
         4314.359896295189}, {"id": "BqqesHM5ZounBdqLXpIruQ", "alias": "hey-bangkok-denver",
         "name": "Hey Bangkok!", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/-aIpbhWh5s1qYiN18tueFA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/hey-bangkok-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "review_count": 130, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
+        "review_count": 131, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
         "noodles", "title": "Noodles"}], "rating": 4.5, "coordinates": {"latitude":
         39.7109567, "longitude": -104.981987}, "transactions": ["delivery", "pickup"],
         "price": "$$", "location": {"address1": "301 S Pennsylvania St", "address2":
@@ -106,20 +116,10 @@ http_interactions:
         "1862 S Wadsworth Blvd", "address2": null, "address3": "", "city": "Denver",
         "zip_code": "80232", "country": "US", "state": "CO", "display_address": ["1862
         S Wadsworth Blvd", "Denver, CO 80232"]}, "phone": "+13036328079", "display_phone":
-        "(303) 632-8079", "distance": 10979.411234846959}, {"id": "gN8o-SG2PgCQGYrOCkkqng",
-        "alias": "liangs-thai-food-denver", "name": "Liang''s Thai Food", "image_url":
-        "https://s3-media4.fl.yelpcdn.com/bphoto/dbP1saUSalUP1174JyxgtA/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/liangs-thai-food-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "review_count": 413, "categories": [{"alias": "thai", "title": "Thai"}, {"alias":
-        "foodtrucks", "title": "Food Trucks"}], "rating": 4.5, "coordinates": {"latitude":
-        39.74521, "longitude": -104.9921817}, "transactions": ["delivery"], "price":
-        "$", "location": {"address1": "16TH St And California St", "address2": "",
-        "address3": "", "city": "Denver", "zip_code": "80202", "country": "US", "state":
-        "CO", "display_address": ["16TH St And California St", "Denver, CO 80202"]},
-        "phone": "+17208108693", "display_phone": "(720) 810-8693", "distance": 2162.8508051618774},
-        {"id": "6kRbrLNIZKZ1fcjgsTFobg", "alias": "fortune-wok-to-table-denver", "name":
-        "Fortune Wok to Table", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/aVmP8cWwrCsLWWjwx8wvjg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/fortune-wok-to-table-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "(303) 632-8079", "distance": 10979.411234846959}, {"id": "6kRbrLNIZKZ1fcjgsTFobg",
+        "alias": "fortune-wok-to-table-denver", "name": "Fortune Wok to Table", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/aVmP8cWwrCsLWWjwx8wvjg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/fortune-wok-to-table-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 389, "categories": [{"alias": "noodles", "title": "Noodles"},
         {"alias": "dimsum", "title": "Dim Sum"}, {"alias": "shanghainese", "title":
         "Shanghainese"}], "rating": 4.5, "coordinates": {"latitude": 39.72124, "longitude":
@@ -194,22 +194,13 @@ http_interactions:
         "alias": "aungs-bangkok-cafe-englewood-3", "name": "Aung''s Bangkok Cafe",
         "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/lYYJR5HmVQszYpazh4aTyQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/aungs-bangkok-cafe-englewood-3?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "review_count": 455, "categories": [{"alias": "thai", "title": "Thai"}], "rating":
+        "review_count": 456, "categories": [{"alias": "thai", "title": "Thai"}], "rating":
         4.5, "coordinates": {"latitude": 39.6532549, "longitude": -104.9732469}, "transactions":
         ["delivery"], "price": "$$", "location": {"address1": "1225 E Hampden Ave",
         "address2": "", "address3": "", "city": "Englewood", "zip_code": "80113",
         "country": "US", "state": "CO", "display_address": ["1225 E Hampden Ave",
         "Englewood, CO 80113"]}, "phone": "+13038069354", "display_phone": "(303)
-        806-9354", "distance": 9132.703118181102}, {"id": "qWblr0XtWSddEt2ZeTzEBg",
-        "alias": "bubu-denver", "name": "Bubu", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/cSV8BGm2hJ62favUaQpuRg/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/bubu-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "review_count": 166, "categories": [{"alias": "asianfusion", "title": "Asian
-        Fusion"}], "rating": 4.5, "coordinates": {"latitude": 39.7476804, "longitude":
-        -104.9994096}, "transactions": ["delivery", "pickup"], "price": "$$", "location":
-        {"address1": "1423 Larimer St", "address2": "", "address3": "", "city": "Denver",
-        "zip_code": "80202", "country": "US", "state": "CO", "display_address": ["1423
-        Larimer St", "Denver, CO 80202"]}, "phone": "+13039962685", "display_phone":
-        "(303) 996-2685", "distance": 2836.3881643679024}, {"id": "yUXr2d9pomzJgmbPl8tlZQ",
+        806-9354", "distance": 9132.703118181102}, {"id": "yUXr2d9pomzJgmbPl8tlZQ",
         "alias": "q-house-denver", "name": "Q House", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/j6qTLzzfT31F92HxwrH0ww/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/q-house-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 230, "categories": [{"alias": "chinese", "title": "Chinese"}],
@@ -260,18 +251,28 @@ http_interactions:
         E Colfax Ave", "address2": "", "address3": "", "city": "Denver", "zip_code":
         "80206", "country": "US", "state": "CO", "display_address": ["2816 E Colfax
         Ave", "Denver, CO 80206"]}, "phone": "+13033225939", "display_phone": "(303)
-        322-5939", "distance": 1498.163504137593}, {"id": "lcS16U_UxGBieMthMp67Bw",
-        "alias": "woodys-wings-n-things-westminster", "name": "Woody''s Wings N Things",
-        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/eLe4bwq32xOkc2f9MzEyrw/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/woodys-wings-n-things-westminster?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
-        "review_count": 297, "categories": [{"alias": "chicken_wings", "title": "Chicken
-        Wings"}, {"alias": "cambodian", "title": "Cambodian"}, {"alias": "laotian",
-        "title": "Laotian"}], "rating": 4.5, "coordinates": {"latitude": 39.820522,
-        "longitude": -105.035119}, "transactions": ["delivery"], "price": "$$", "location":
-        {"address1": "6817 Lowell Blvd", "address2": "", "address3": "", "city": "Westminster",
-        "zip_code": "80221", "country": "US", "state": "CO", "display_address": ["6817
-        Lowell Blvd", "Westminster, CO 80221"]}, "phone": "+13034270302", "display_phone":
-        "(303) 427-0302", "distance": 10957.270432931675}], "total": 1200, "region":
-        {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Tue, 25 Oct 2022 19:23:18 GMT
+        322-5939", "distance": 1498.163504137593}, {"id": "eOYc3PXkvrovPeuQnWognQ",
+        "alias": "mehak-indias-aroma-denver-2", "name": "Mehak India''s Aroma", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/CzbzAT1SD9exma35ESPBUQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/mehak-indias-aroma-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 340, "categories": [{"alias": "indpak", "title": "Indian"}],
+        "rating": 4.5, "coordinates": {"latitude": 39.7202229, "longitude": -104.9495863},
+        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "250 Steele St", "address2": "Ste 100", "address3": "", "city": "Denver",
+        "zip_code": "80206", "country": "US", "state": "CO", "display_address": ["250
+        Steele St", "Ste 100", "Denver, CO 80206"]}, "phone": "+17206389350", "display_phone":
+        "(720) 638-9350", "distance": 2452.7954941872963}, {"id": "NZ4aXquYF1mrh8gM_ak3gg",
+        "alias": "hong-kong-cafe-denver-2", "name": "Hong Kong Cafe", "image_url":
+        "https://s3-media4.fl.yelpcdn.com/bphoto/HSBkrLRPe7tLJX7jAQk-5w/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/hong-kong-cafe-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
+        "review_count": 783, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "noodles", "title": "Noodles"}], "rating": 4.5, "coordinates": {"latitude":
+        39.659706, "longitude": -104.860633}, "transactions": ["delivery", "pickup"],
+        "price": "$$", "location": {"address1": "10890 E Dartmouth Ave", "address2":
+        "Ste C", "address3": "", "city": "Denver", "zip_code": "80014", "country":
+        "US", "state": "CO", "display_address": ["10890 E Dartmouth Ave", "Ste C",
+        "Denver, CO 80014"]}, "phone": "+13036966688", "display_phone": "(303) 696-6688",
+        "distance": 12612.444944923584}], "total": 1200, "region": {"center": {"longitude":
+        -104.97024536132812, "latitude": 39.73552421220229}}}'
+  recorded_at: Wed, 26 Oct 2022 01:07:08 GMT
 recorded_with: VCR 6.1.0

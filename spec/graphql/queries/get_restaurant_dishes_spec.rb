@@ -20,7 +20,7 @@ RSpec.describe Types::QueryType, type: :request do
       expect(data['city']).to eq('Denver, CO')
       expect(data['rating']).to eq('4.5')
       expect(data['address']).to eq('703 S Colorado Blvd, Denver, CO 80246')
-      expect(data['dishes'].size).to eq(38)
+      expect(data['dishes'].size).to eq(37)
       expect(data['dishes']).to include({'name'=> @hot_wings.name, 'spiceRating'=>@hot_wings.spice_rating})
     end
 
