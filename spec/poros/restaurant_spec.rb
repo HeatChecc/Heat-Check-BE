@@ -143,5 +143,13 @@ RSpec.describe Restaurant do
       expect(@restaurant.dishes.size).to eq(17)
       expect(@restaurant.dishes.last.name).to eq("C Kid's Meat and Cheese Sandwich")
     end
+
+    it 'will delete a duplicate dish from restaurant', :vcr do
+      dish_4 = Dish.create!(name: 'hot wings', cuisine_type: 'murican', yelp_id: 'eCkWoMKHh5PoNqYvdyviRA',
+        spice_rating: 2)
+
+      expect(@restaurant.dishes.size).to eq(17)
+      expect(@restaurant.dishes).to_not include(dish_4)
+    end
   end
 end

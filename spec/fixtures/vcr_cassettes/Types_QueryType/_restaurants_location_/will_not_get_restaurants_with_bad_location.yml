@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       X-Zipkin-Id:
-      - 7618ede12410aaba
+      - 25fa0952544b2776
       Server:
       - envoy
       X-Routing-Service:
@@ -45,11 +45,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 17:33:01 GMT
+      - Wed, 26 Oct 2022 17:49:48 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8228-DEN
+      - cache-den8269-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -58,5 +58,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Wed, 26 Oct 2022 17:33:01 GMT
+  recorded_at: Wed, 26 Oct 2022 17:49:48 GMT
 recorded_with: VCR 6.1.0

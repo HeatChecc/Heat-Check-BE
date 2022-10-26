@@ -65,7 +65,6 @@ RSpec.describe Dish do
         it 'finds duplicate dishes' do
           dup_1 = Dish.create!(name: 'dupe', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 2)
           dup_2 = Dish.create!(name: 'dupe', cuisine_type: 'pain', yelp_id: 'OT6MJNr8Gzd9nyf25dEl6g', spice_rating: 5)
-          binding.pry
           expect(Dish.duplicate_dish).to eq([dup_2])
         end
       end

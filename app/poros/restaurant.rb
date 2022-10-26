@@ -40,7 +40,7 @@ class Restaurant
 
   def dishes
     html_dishes
-    Dish.duplicate_dish.delete_all
+    Dish.duplicate_dish.destroy_all
     Dish.where(yelp_id: @id)
   end
   
