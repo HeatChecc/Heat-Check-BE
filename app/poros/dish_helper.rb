@@ -73,12 +73,17 @@ module DishHelper
 
   def html_to_ruby
     formatted.map do |dish_name|
-      Dish.create!(name: dish_name,
-                   cuisine_type: first_cuisine,
-                   yelp_id: @id,
-                   spice_rating: nil
-               )
+      dish = Dish.create!(name: dish_name,
+        cuisine_type: first_cuisine,
+                  yelp_id: @id,
+                  spice_rating: nil
+                )
+      possible = Dish.where(name: dish.name)
+      if possible.pluck(:yelp_id).size < 1
+        Dish.delete(dish.id)
+      end
     end
+    formatted
   end
 
   def html_dishes
