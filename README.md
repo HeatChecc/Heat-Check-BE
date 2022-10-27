@@ -384,6 +384,8 @@ mutation {
 7. Start up your local server: `rails s`
 8. Visit the endpoint url  `http://localhost:3000/graphiql` to consume the API locally.
 
+<img src= "https://user-images.githubusercontent.com/102835975/198351631-00fafd65-6eba-444a-a68b-2e753e75962b.gif" width=20% height=20%>
+
 
 ### 🔥 Contributors
 
