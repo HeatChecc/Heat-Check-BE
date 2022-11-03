@@ -112,7 +112,6 @@ module DishHelper
 
   def html_dishes
     html_to_ruby
-    
     extra = Dish.where(name: @name)
     if extra[0]
       extra[0].destroy
