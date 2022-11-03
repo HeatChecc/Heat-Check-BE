@@ -28,28 +28,28 @@ http_interactions:
       - application/json
       X-B3-Sampled:
       - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-pnmlg; site=public_api_v3
+      X-Zipkin-Id:
+      - 529e5595a7030463
       Server:
       - envoy
-      X-Zipkin-Id:
-      - '049b314f06d5bc02'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-99kjf; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 17:49:45 GMT
+      - Thu, 03 Nov 2022 23:52:12 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8236-DEN
+      - cache-den8246-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -58,5 +58,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "NOT_FOUND", "description": "Resource could not
         be found."}}'
-  recorded_at: Wed, 26 Oct 2022 17:49:45 GMT
+  recorded_at: Thu, 03 Nov 2022 23:52:12 GMT
 recorded_with: VCR 6.1.0

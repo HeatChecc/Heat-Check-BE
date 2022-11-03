@@ -26,6 +26,23 @@ module DishHelper
     end
   end
 
+  def biz_dishes_arr
+    if @alias == "Not found"
+      []
+    else
+      response = Faraday.new("https://www.yelp.com/").get("biz/#{@alias}")
+      html = response.body
+      doc = Nokogiri::HTML(html)
+      results = []
+      doc.css("p").each do |element|
+        if element.attributes["class"].value[-10..-1] == "css-nyjpex"
+          results << element.children.text
+        end
+      end
+      results
+    end
+  end
+
   def dish_filter
     possible = doc_results.uniq
     ignore_list = [ "write", "menu", "yelp", "review", "reviews", "about", "sign", "services", "auto", "careers", "log", "restaurants", "business", "privacy", "policy", "members", "press", "trust", "safety", "content", "collections", "talk", "events", "support", "developers", "rss", "blog", "management", "photos", "photo" ]
@@ -73,20 +90,36 @@ module DishHelper
 
   def html_to_ruby
     formatted.map do |dish_name|
-      dish = Dish.create!(
-              name: dish_name,
-              cuisine_type: first_cuisine,
-              yelp_id: @id,
-              spice_rating: nil
-            )
+      Dish.create!(
+        name: dish_name,
+        cuisine_type: first_cuisine,
+        yelp_id: @id,
+        spice_rating: nil
+      )
+    end
+  end
+
+  def html_to_ruby_biz
+    biz_dishes_arr.map do |dish_name|
+      Dish.create!(
+        name: dish_name,
+        cuisine_type: first_cuisine,
+        yelp_id: @id,
+        spice_rating: nil
+      )
     end
   end
 
   def html_dishes
     html_to_ruby
+    
     extra = Dish.where(name: @name)
     if extra[0]
       extra[0].destroy
     end
+  end
+
+  def biz_dishes
+    html_to_ruby_biz
   end
 end

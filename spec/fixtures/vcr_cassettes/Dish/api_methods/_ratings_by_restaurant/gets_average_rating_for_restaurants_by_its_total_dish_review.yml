@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - affc0aebc8dcd573
-      Server:
-      - envoy
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4565'
+      - '4853'
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-4rvjd; site=public_api_v3
+      X-Zipkin-Id:
+      - c48b5053e43e8121
       Ratelimit-Resettime:
-      - '2022-10-27T00:00:00+00:00'
+      - '2022-11-04T00:00:00+00:00'
+      Server:
+      - envoy
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-nv5pw; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 17:49:48 GMT
+      - Thu, 03 Nov 2022 23:52:17 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8249-DEN
+      - cache-den8244-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -67,7 +67,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"id": "Sk89ZllCbWVqA4M_MoJ7Lg", "alias": "noodles-express-denver",
-        "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
+        "name": "Noodles Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/H2PIECHzvbrhVEmK5rWaOg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/noodles-express-denver?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "phone": "+13037368818", "display_phone": "(303) 736-8818", "review_count":
         108, "categories": [{"alias": "noodles", "title": "Noodles"}, {"alias": "szechuan",
@@ -75,8 +75,8 @@ http_interactions:
         Blvd", "address2": "", "address3": null, "city": "Denver", "zip_code": "80246",
         "country": "US", "state": "CO", "display_address": ["703 S Colorado Blvd",
         "Denver, CO 80246"], "cross_streets": ""}, "coordinates": {"latitude": 39.70269,
-        "longitude": -104.94143}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/dgayoTjtDbOqndnV-PRszg/o.jpg",
-        "https://s3-media4.fl.yelpcdn.com/bphoto/gKgTIg2vbkgwW3rPXFlwAQ/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/jmLZnnYEij_IJv8z84ULng/o.jpg"],
+        "longitude": -104.94143}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/H2PIECHzvbrhVEmK5rWaOg/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/M8MMB_a5Y2fZ0paRNngIsw/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/zsV1HXUPLkmAn2W-MYvAww/o.jpg"],
         "price": "$$", "hours": [{"open": [{"is_overnight": false, "start": "1100",
         "end": "1500", "day": 2}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 2}, {"is_overnight": false, "start": "1100", "end": "1500",
@@ -88,7 +88,7 @@ http_interactions:
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         ["pickup", "delivery"]}'
-  recorded_at: Wed, 26 Oct 2022 17:49:48 GMT
+  recorded_at: Thu, 03 Nov 2022 23:52:17 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/OT6MJNr8Gzd9nyf25dEl6g
@@ -113,38 +113,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - 236cc652ee701680
+      Ratelimit-Remaining:
+      - '4852'
+      Ratelimit-Resettime:
+      - '2022-11-04T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-clldh; site=public_api_v3
       X-B3-Sampled:
       - '0'
+      X-Zipkin-Id:
+      - 2aa6d8295c3bffd1
       Server:
       - envoy
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4564'
-      Ratelimit-Resettime:
-      - '2022-10-27T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-kmgkv; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-103-213-uswest2aprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-103-213-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 17:49:49 GMT
+      - Thu, 03 Nov 2022 23:52:17 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8260-DEN
+      - cache-den8255-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -159,7 +159,7 @@ http_interactions:
         "Busaba", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/jZHknqKPWVtklNsX4U4HEQ/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/busaba-boulder?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "phone": "+17203504927", "display_phone": "(720) 350-4927", "review_count":
-        6, "categories": [{"alias": "thai", "title": "Thai"}, {"alias": "noodles",
+        5, "categories": [{"alias": "thai", "title": "Thai"}, {"alias": "noodles",
         "title": "Noodles"}], "rating": 5.0, "location": {"address1": "4800 Baseline
         Rd", "address2": "Ste A 110", "address3": null, "city": "Boulder", "zip_code":
         "80303", "country": "US", "state": "CO", "display_address": ["4800 Baseline
@@ -178,6 +178,6 @@ http_interactions:
         4}, {"is_overnight": false, "start": "1600", "end": "2000", "day": 4}, {"is_overnight":
         false, "start": "1130", "end": "1400", "day": 5}, {"is_overnight": false,
         "start": "1600", "end": "2000", "day": 5}], "hours_type": "REGULAR", "is_open_now":
-        true}], "transactions": ["pickup", "delivery"]}'
-  recorded_at: Wed, 26 Oct 2022 17:49:48 GMT
+        true}], "transactions": ["delivery", "pickup"]}'
+  recorded_at: Thu, 03 Nov 2022 23:52:17 GMT
 recorded_with: VCR 6.1.0

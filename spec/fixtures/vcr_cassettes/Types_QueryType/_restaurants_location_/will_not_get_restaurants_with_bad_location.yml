@@ -26,30 +26,30 @@ http_interactions:
       - '123'
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - 25fa0952544b2776
-      Server:
-      - envoy
       X-Routing-Service:
-      - routing-main--uswest2-795c4bc4c5-kmgkv; site=public_api_v3
+      - routing-main--uswest2-689dcfd8f7-fxd6h; site=public_api_v3
       X-B3-Sampled:
       - '0'
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - f93aa037b277e2a6
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-112-70-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 26 Oct 2022 17:49:48 GMT
+      - Thu, 03 Nov 2022 23:52:16 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8269-DEN
+      - cache-den8258-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -58,5 +58,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Wed, 26 Oct 2022 17:49:48 GMT
+  recorded_at: Thu, 03 Nov 2022 23:52:16 GMT
 recorded_with: VCR 6.1.0

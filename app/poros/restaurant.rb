@@ -40,6 +40,9 @@ class Restaurant
 
   def dishes
     html_dishes
+    if html_dishes.nil?
+      biz_dishes
+    end
     Dish.duplicate_dish.destroy_all
     Dish.where(yelp_id: @id)
   end
