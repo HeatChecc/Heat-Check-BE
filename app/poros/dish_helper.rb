@@ -35,7 +35,7 @@ module DishHelper
       doc = Nokogiri::HTML(html)
       results = []
       doc.css("p").each do |element|
-        if element.attributes["class"].value[-10..-1] == "css-nyjpex"
+        if element.attributes["class"].value[-10..-1] == "css-nyjpex" && element.children.first.attributes["href"].nil? #checks to see if collected element is business name link in lower part of yelp/biz page
           results << element.children.text
         end
       end

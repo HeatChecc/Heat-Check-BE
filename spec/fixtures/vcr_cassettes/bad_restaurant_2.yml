@@ -24,18 +24,18 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4857'
-      Ratelimit-Resettime:
-      - '2022-11-04T00:00:00+00:00'
-      Server:
-      - envoy
       X-Zipkin-Id:
-      - 2b853ac0b20db438
+      - '062840c968efaf5d'
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-5j76x; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4951'
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-689dcfd8f7-6ql75; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2022-11-05T00:00:00+00:00'
+      Server:
+      - envoy
       Ratelimit-Dailylimit:
       - '5000'
       X-Cloudmap:
@@ -43,19 +43,19 @@ http_interactions:
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Thu, 03 Nov 2022 23:52:16 GMT
+      - Fri, 04 Nov 2022 00:33:28 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8229-DEN
+      - cache-den8268-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -88,7 +88,7 @@ http_interactions:
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         ["pickup", "delivery"]}'
-  recorded_at: Thu, 03 Nov 2022 23:52:16 GMT
+  recorded_at: Fri, 04 Nov 2022 00:33:28 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/9999
@@ -115,30 +115,30 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
       Server:
       - envoy
       X-Routing-Service:
-      - routing-main--uswest2-689dcfd8f7-vkfjj; site=public_api_v3
+      - routing-main--uswest2-689dcfd8f7-m5767; site=public_api_v3
       X-Zipkin-Id:
-      - da639a5e11db14bf
+      - ea78d4741912d0b4
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-69-73-uswest2aprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-69-73-uswest2aprod
       Accept-Ranges:
       - bytes
       Date:
-      - Thu, 03 Nov 2022 23:52:16 GMT
+      - Fri, 04 Nov 2022 00:33:28 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8264-DEN
+      - cache-den8272-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -147,5 +147,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Thu, 03 Nov 2022 23:52:16 GMT
+  recorded_at: Fri, 04 Nov 2022 00:33:28 GMT
 recorded_with: VCR 6.1.0
