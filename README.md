@@ -7,6 +7,8 @@
 
 🔥 Check out the front-end repo [here](https://github.com/HeatChecc/Heat-Check-FE)
 
+🔥 Visit our application website [here]( https://heatcheck-fe.herokuapp.com/)
+
 ## 🔥 Built With
 [<img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white"/>](https://www.ruby-lang.org/en/) <br>
 [<img src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white"/>](https://rubyonrails.org/) <br>
