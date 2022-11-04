@@ -24,38 +24,38 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-B3-Sampled:
+      - '0'
+      Server:
+      - envoy
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4955'
-      X-Zipkin-Id:
-      - 71d9d7cf277113b8
+      - '4942'
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-zdh6r; site=public_api_v3
       Ratelimit-Resettime:
       - '2022-11-05T00:00:00+00:00'
-      Server:
-      - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-689dcfd8f7-9vms2; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
+      X-Zipkin-Id:
+      - a044afa94d6d098a
       X-Cloudmap:
       - routing_uswest2
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-103-213-uswest2aprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-103-213-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 04 Nov 2022 00:33:25 GMT
+      - Fri, 04 Nov 2022 00:36:42 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8283-DEN
+      - cache-den8272-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -71,7 +71,7 @@ http_interactions:
         "is_closed": false, "url": "https://www.yelp.com/biz/himalayan-spice-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 82, "categories": [{"alias": "indpak", "title": "Indian"}],
         "rating": 5.0, "coordinates": {"latitude": 39.77442708558098, "longitude":
-        -105.04432613479163}, "transactions": ["delivery", "pickup"], "location":
+        -105.04432613479163}, "transactions": ["pickup", "delivery"], "location":
         {"address1": "4279 Tennsyon St", "address2": null, "address3": "", "city":
         "Denver", "zip_code": "80212", "country": "US", "state": "CO", "display_address":
         ["4279 Tennsyon St", "Denver, CO 80212"]}, "phone": "+17204853107", "display_phone":
@@ -124,7 +124,7 @@ http_interactions:
         "review_count": 492, "categories": [{"alias": "indpak", "title": "Indian"},
         {"alias": "vegan", "title": "Vegan"}, {"alias": "gluten_free", "title": "Gluten-Free"}],
         "rating": 4.5, "coordinates": {"latitude": 39.769626, "longitude": -105.028993785381},
-        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
         "3157 W 38th Ave", "address2": null, "address3": "", "city": "Denver", "zip_code":
         "80211", "country": "US", "state": "CO", "display_address": ["3157 W 38th
         Ave", "Denver, CO 80211"]}, "phone": "+13034553127", "display_phone": "(303)
@@ -154,7 +154,7 @@ http_interactions:
         "review_count": 447, "categories": [{"alias": "indpak", "title": "Indian"},
         {"alias": "vegetarian", "title": "Vegetarian"}, {"alias": "vegan", "title":
         "Vegan"}], "rating": 4.5, "coordinates": {"latitude": 39.786902, "longitude":
-        -104.771731}, "transactions": ["delivery", "pickup", "restaurant_reservation"],
+        -104.771731}, "transactions": ["pickup", "delivery", "restaurant_reservation"],
         "price": "$$", "location": {"address1": "4968 N Tower Rd", "address2": null,
         "address3": "", "city": "Denver", "zip_code": "80249", "country": "US", "state":
         "CO", "display_address": ["4968 N Tower Rd", "Denver, CO 80249"]}, "phone":
@@ -270,11 +270,11 @@ http_interactions:
         false, "url": "https://www.yelp.com/biz/mehak-indias-aroma-denver-2?adjust_creative=BcjdOZ9pkVL_4m4EoK-Vvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=BcjdOZ9pkVL_4m4EoK-Vvw",
         "review_count": 340, "categories": [{"alias": "indpak", "title": "Indian"}],
         "rating": 4.5, "coordinates": {"latitude": 39.7202229, "longitude": -104.9495863},
-        "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1":
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
         "250 Steele St", "address2": "Ste 100", "address3": "", "city": "Denver",
         "zip_code": "80206", "country": "US", "state": "CO", "display_address": ["250
         Steele St", "Ste 100", "Denver, CO 80206"]}, "phone": "+17206389350", "display_phone":
         "(720) 638-9350", "distance": 2452.7954941872963}], "total": 1200, "region":
         {"center": {"longitude": -104.97024536132812, "latitude": 39.73552421220229}}}'
-  recorded_at: Fri, 04 Nov 2022 00:33:25 GMT
+  recorded_at: Fri, 04 Nov 2022 00:36:42 GMT
 recorded_with: VCR 6.1.0

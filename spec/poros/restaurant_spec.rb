@@ -139,7 +139,6 @@ RSpec.describe Restaurant do
     
     it 'can return a menu(dishes) if yelp alias is biz/ instead of menu/', :vcr do
       biz_restaurant = RestaurantsFacade.get_restaurant('yUXr2d9pomzJgmbPl8tlZQ')
-      
       expect(biz_restaurant.dishes.size).to eq(20)
     end
     

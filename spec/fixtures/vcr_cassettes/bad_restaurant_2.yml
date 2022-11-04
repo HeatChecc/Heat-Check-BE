@@ -24,18 +24,18 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - '062840c968efaf5d'
-      X-Routing-Service:
-      - routing-main--uswest2-689dcfd8f7-5j76x; site=public_api_v3
       Ratelimit-Remaining:
-      - '4951'
-      X-B3-Sampled:
-      - '0'
+      - '4938'
       Ratelimit-Resettime:
       - '2022-11-05T00:00:00+00:00'
       Server:
       - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-zdh6r; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 822648f03691c02e
       Ratelimit-Dailylimit:
       - '5000'
       X-Cloudmap:
@@ -43,19 +43,19 @@ http_interactions:
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 04 Nov 2022 00:33:28 GMT
+      - Fri, 04 Nov 2022 00:36:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8268-DEN
+      - cache-den8276-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -88,7 +88,7 @@ http_interactions:
         "end": "1500", "day": 6}, {"is_overnight": false, "start": "1600", "end":
         "2030", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         ["pickup", "delivery"]}'
-  recorded_at: Fri, 04 Nov 2022 00:33:28 GMT
+  recorded_at: Fri, 04 Nov 2022 00:36:45 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/9999
@@ -115,12 +115,12 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
+      X-Zipkin-Id:
+      - fec4babdf7ae1d92
+      X-Routing-Service:
+      - routing-main--uswest2-689dcfd8f7-prqbc; site=public_api_v3
       Server:
       - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-689dcfd8f7-m5767; site=public_api_v3
-      X-Zipkin-Id:
-      - ea78d4741912d0b4
       X-B3-Sampled:
       - '0'
       X-Cloudmap:
@@ -128,17 +128,17 @@ http_interactions:
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-103-213-uswest2aprod
       X-Extlb:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-103-213-uswest2aprod
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 04 Nov 2022 00:33:28 GMT
+      - Fri, 04 Nov 2022 00:36:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8272-DEN
+      - cache-den8226-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -147,5 +147,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Fri, 04 Nov 2022 00:33:28 GMT
+  recorded_at: Fri, 04 Nov 2022 00:36:45 GMT
 recorded_with: VCR 6.1.0
